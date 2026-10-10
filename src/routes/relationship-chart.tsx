@@ -51,6 +51,16 @@ function RelationshipChartPage() {
             <span className="text-foreground font-medium">Relationship Chart</span>
           </nav>
 
+          {/* Directory Header Banner */}
+          <div className="mb-8 p-6 rounded-3xl border border-border bg-card shadow-sm space-y-2">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
+              Avatar: Seven Havens Characters Relationship &amp; Alliance Network
+            </h1>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              Explore the intricate network connecting all official Avatar: Seven Havens characters. From the cosmic twin bond between Avatar: Seven Havens characters Pavi and Nisha to the tactical protection of airbender Jae, this interactive map documents the shifting loyalties and guardian ties among Avatar: Seven Havens characters across Book 1.
+            </p>
+          </div>
+
           <RelationshipChart />
         </div>
       </main>
