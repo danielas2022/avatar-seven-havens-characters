@@ -66,9 +66,9 @@ export function TwinSpotlight() {
               {/* Artwork Header */}
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-black/40">
                 <img
-                  src={pavi.imageUrl}
+                  src="/imgs/canon/trio-key-scene.png"
                   alt="Pavi - The Reluctant Avatar"
-                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                 <div className="absolute top-4 left-4">

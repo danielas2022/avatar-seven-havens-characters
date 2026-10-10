@@ -9,25 +9,25 @@ export function HeroSection() {
 
   const trailerList = [
     {
-      title: 'Official Paramount+ Debut Trailer',
-      badge: 'Main Trailer &bull; 2:14',
+      title: 'Official Key Scene: Pavi, Jae & Fluffy Mount',
+      badge: 'Main Anime Scene &bull; 2:14',
       src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
-      poster: '/imgs/hero-banner.png',
-      desc: 'The official world premiere revealing Pavi, Haven Ellora, and the fractured cycle.',
+      poster: '/imgs/canon/trio-key-scene.png',
+      desc: 'The official colorful anime still featuring Pavi, Jae, and their furry horned companion.',
     },
     {
-      title: 'Twin Avatars & Spirit Duality Reveal',
-      badge: 'Teaser 2 &bull; 1:45',
-      src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
-      poster: '/imgs/trailer-poster.png',
-      desc: 'Deep dive into the psychic bond between twin sisters Pavi and Nisha.',
-    },
-    {
-      title: 'Haven Ellora Escape & Jae Flight Sequence',
-      badge: 'Scene Sneak Peek &bull; 1:12',
+      title: 'Pavi with Spirit Korra & Spirit Aang',
+      badge: 'Past Avatars &bull; 1:45',
       src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
       poster: '/imgs/canon/pavi-spirits-official.png',
-      desc: 'Jae pilots his glider through sandstorm ruins escaping bounty envoys.',
+      desc: 'Deep dive into the psychic bond between young Pavi and past Avatars Korra and Aang.',
+    },
+    {
+      title: 'Haven Desert Mount Expedition',
+      badge: 'Wasteland Patrol &bull; 1:12',
+      src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
+      poster: '/imgs/canon/expedition-landscape.png',
+      desc: 'Pavi riding her beast mount alongside Jae navigating the ruined canyon wastes.',
     },
   ];
 
