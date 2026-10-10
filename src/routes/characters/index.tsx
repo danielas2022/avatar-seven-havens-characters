@@ -52,6 +52,16 @@ function CharactersIndexPage() {
             <span className="text-foreground font-medium">Characters</span>
           </nav>
 
+          {/* Directory Header Banner */}
+          <div className="mb-8 p-6 rounded-3xl border border-border bg-card shadow-sm space-y-2">
+            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
+              Avatar: Seven Havens Characters Roster &amp; Canon Database
+            </h1>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              Explore the complete directory of official Avatar: Seven Havens characters. Documenting every figure in the 2026 series, our archive compares new Avatar: Seven Havens characters with historical franchise masters. Discover verified ability profiles for Avatar: Seven Havens characters Pavi, Nisha, Jae, Karthik, and companion Avatar: Seven Havens characters across all seven sanctuaries.
+            </p>
+          </div>
+
           <TwinSpotlight />
           <CharacterGrid />
         </div>
