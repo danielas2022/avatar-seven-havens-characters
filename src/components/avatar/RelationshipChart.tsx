@@ -215,41 +215,65 @@ export function RelationshipChart() {
                         }
                         className={isConnected ? 'opacity-100' : 'opacity-25'}
                       />
-
-                      {/* Mid-point Relationship Chip on Active Connections */}
-                      {isConnected && (
-                        <g>
-                          <rect
-                            x={midX - 7}
-                            y={midY - 2}
-                            width="14"
-                            height="4"
-                            rx="1.5"
-                            fill="#18181b"
-                            stroke={strokeColor}
-                            strokeWidth="0.3"
-                            className="opacity-95"
-                          />
-                          <text
-                            x={midX}
-                            y={midY + 0.8}
-                            textAnchor="middle"
-                            fill="#ffffff"
-                            fontSize="1.8"
-                            fontWeight="bold"
-                            className="select-none tracking-tight"
-                          >
-                            {edge.label}
-                          </text>
-                        </g>
-                      )}
                     </g>
                   );
                 })}
               </svg>
 
+              {/* HTML Edge Relationship Badges Layer (Auto-sizing, Zero Overflow, Theme-Safe) */}
+              <div className="absolute inset-0 pointer-events-none z-15">
+                {activeEdges.map((edge) => {
+                  const source = RELATIONSHIP_NODES.find((n) => n.id === edge.source);
+                  const target = RELATIONSHIP_NODES.find((n) => n.id === edge.target);
+                  if (!source || !target) return null;
+
+                  const midX = (source.x + target.x) / 2;
+                  const midY = (source.y + target.y) / 2 - (edge.type === 'twin' ? 4 : 2);
+
+                  // Theme-safe elemental styling matching line colors
+                  let badgeStyle = 'bg-stone-950/95 text-stone-100 border-stone-600 shadow-md';
+                  let dotColor = 'bg-stone-400';
+
+                  if (edge.type === 'twin') {
+                    badgeStyle =
+                      'bg-stone-950/95 text-amber-300 border-amber-500/80 shadow-amber-500/25 shadow-md';
+                    dotColor = 'bg-amber-400 animate-pulse';
+                  } else if (edge.source === 'jae' || edge.target === 'jae') {
+                    badgeStyle =
+                      'bg-stone-950/95 text-sky-300 border-sky-500/80 shadow-sky-500/25 shadow-md';
+                    dotColor = 'bg-sky-400';
+                  } else if (edge.source === 'korra' || edge.source === 'aang') {
+                    badgeStyle =
+                      'bg-stone-950/95 text-cyan-200 border-cyan-400/80 shadow-cyan-400/25 shadow-md';
+                    dotColor = 'bg-cyan-300 animate-pulse';
+                  } else if (edge.type === 'guardian') {
+                    badgeStyle =
+                      'bg-stone-950/95 text-blue-300 border-blue-500/80 shadow-blue-500/25 shadow-md';
+                    dotColor = 'bg-blue-400';
+                  }
+
+                  return (
+                    <div
+                      key={`edge-badge-${edge.id}`}
+                      style={{
+                        left: `${midX}%`,
+                        top: `${midY}%`,
+                      }}
+                      className="absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-all duration-300"
+                    >
+                      <div
+                        className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border text-[10px] sm:text-xs font-semibold whitespace-nowrap tracking-tight select-none backdrop-blur-md shadow-lg ${badgeStyle}`}
+                      >
+                        <span className={`h-1.5 w-1.5 rounded-full shrink-0 ${dotColor}`} />
+                        <span>{edge.label}</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
               {/* HTML Interactive Character Node Tokens Layer */}
-              <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute inset-0 pointer-events-none z-20">
                 {filteredNodes.map((node) => {
                   const isSelected = node.id === selectedNodeId;
                   const isNeighbor = activeEdges.some(
