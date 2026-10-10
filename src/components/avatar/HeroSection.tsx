@@ -8,7 +8,7 @@ export function HeroSection() {
 
   const trailerList = [
     {
-      tabName: '正片剧照',
+      tabName: 'Official Scene',
       title: 'Official Key Scene: Pavi, Jae & Mount',
       badge: 'Main Anime Scene • 2:14',
       src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
@@ -16,7 +16,7 @@ export function HeroSection() {
       desc: 'Pavi, Jae and their fluffy beast mount in the official animation still.',
     },
     {
-      tabName: '前代神通',
+      tabName: 'Past Avatars',
       title: 'Pavi with Spirit Korra & Aang',
       badge: 'Past Avatars • 1:45',
       src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
@@ -24,7 +24,7 @@ export function HeroSection() {
       desc: 'Young Pavi spiritually connects with Korra and Aang.',
     },
     {
-      tabName: '荒漠远征',
+      tabName: 'Wasteland Patrol',
       title: 'Haven Canyon Mount Patrol',
       badge: 'Wasteland Patrol • 1:12',
       src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
@@ -40,12 +40,11 @@ export function HeroSection() {
     {
       id: 'pavi',
       name: 'Pavi',
-      nameZh: '帕维',
+      alias: 'Next Earth Avatar',
       role: 'The Reluctant Avatar',
-      roleZh: '新降世神通',
       bending: 'Earth',
       elementIcon: '🪨',
-      elementBadge: 'Earth (土)',
+      elementBadge: 'Earth Bending',
       imageUrl: '/imgs/canon/pavi-canon-smile-face.png',
       ringClasses: 'ring-2 ring-emerald-500/80 group-hover:ring-emerald-400 group-hover:shadow-[0_0_24px_rgba(16,185,129,0.55)]',
       badgeClasses: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
@@ -54,12 +53,11 @@ export function HeroSection() {
     {
       id: 'nisha',
       name: 'Nisha',
-      nameZh: '妮莎',
+      alias: 'Twin Avatar of Fire',
       role: 'The Twin Avatar',
-      roleZh: '双生降世神通',
       bending: 'Avatar',
       elementIcon: '🔥',
-      elementBadge: 'Twin Avatar (双生)',
+      elementBadge: 'Twin Avatar',
       imageUrl: '/imgs/characters/nisha.jpg',
       ringClasses: 'ring-2 ring-rose-500/80 group-hover:ring-rose-400 group-hover:shadow-[0_0_24px_rgba(244,63,94,0.55)]',
       badgeClasses: 'bg-rose-500/15 text-rose-400 border-rose-500/30',
@@ -68,12 +66,11 @@ export function HeroSection() {
     {
       id: 'jae',
       name: 'Jae',
-      nameZh: '杰',
+      alias: 'Airbender Platoon Leader',
       role: 'Airbender Officer',
-      roleZh: '御气护卫队长',
       bending: 'Air',
       elementIcon: '🌪️',
-      elementBadge: 'Air (气)',
+      elementBadge: 'Air Bending',
       imageUrl: '/imgs/canon/jae-canon-face.png',
       ringClasses: 'ring-2 ring-sky-400/80 group-hover:ring-sky-300 group-hover:shadow-[0_0_24px_rgba(56,189,248,0.55)]',
       badgeClasses: 'bg-sky-500/15 text-sky-400 border-sky-500/30',
@@ -82,12 +79,11 @@ export function HeroSection() {
     {
       id: 'karthik',
       name: 'Karthik',
-      nameZh: '卡尔蒂克',
+      alias: 'Ellora Guard Captain',
       role: 'Guard Commander',
-      roleZh: '防卫指挥官',
       bending: 'Air',
       elementIcon: '🌪️',
-      elementBadge: 'Air Commander (气)',
+      elementBadge: 'Air Commander',
       imageUrl: '/imgs/characters/karthik.png',
       ringClasses: 'ring-2 ring-cyan-400/80 group-hover:ring-cyan-300 group-hover:shadow-[0_0_24px_rgba(6,182,212,0.55)]',
       badgeClasses: 'bg-cyan-500/15 text-cyan-400 border-cyan-500/30',
@@ -96,12 +92,11 @@ export function HeroSection() {
     {
       id: 'daemin',
       name: 'Daemin',
-      nameZh: '戴明',
+      alias: 'Water Bending Scout',
       role: 'Water Soldier',
-      roleZh: '御水突击先锋',
       bending: 'Water',
       elementIcon: '🌊',
-      elementBadge: 'Water (水)',
+      elementBadge: 'Water Bending',
       imageUrl: '/imgs/characters/daemin.png',
       ringClasses: 'ring-2 ring-blue-500/80 group-hover:ring-blue-400 group-hover:shadow-[0_0_24px_rgba(59,130,246,0.55)]',
       badgeClasses: 'bg-blue-500/15 text-blue-400 border-blue-500/30',
@@ -110,12 +105,11 @@ export function HeroSection() {
     {
       id: 'agam',
       name: 'Agam',
-      nameZh: '阿加姆',
+      alias: 'Haven Protector & Mother',
       role: 'Haven Matron',
-      roleZh: '避难所庇护者',
       bending: 'Non-Bender',
       elementIcon: '🛡️',
-      elementBadge: 'Haven Matron (体术)',
+      elementBadge: 'Haven Matron',
       imageUrl: '/imgs/characters/agam.jpg',
       ringClasses: 'ring-2 ring-amber-500/80 group-hover:ring-amber-400 group-hover:shadow-[0_0_24px_rgba(245,158,11,0.55)]',
       badgeClasses: 'bg-amber-500/15 text-amber-400 border-amber-500/30',
@@ -124,12 +118,11 @@ export function HeroSection() {
     {
       id: 'zi',
       name: 'Zi',
-      nameZh: '齐长老',
+      alias: 'Ancient Haven Scholar',
       role: 'Haven Elder',
-      roleZh: '避难所学者顾问',
       bending: 'Non-Bender',
       elementIcon: '📜',
-      elementBadge: 'Haven Scholar (学者)',
+      elementBadge: 'Haven Scholar',
       imageUrl: '/imgs/characters/zi.jpg',
       ringClasses: 'ring-2 ring-purple-500/80 group-hover:ring-purple-400 group-hover:shadow-[0_0_24px_rgba(168,85,247,0.55)]',
       badgeClasses: 'bg-purple-500/15 text-purple-400 border-purple-500/30',
@@ -149,7 +142,7 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* ========================================================================= */}
-        {/* SECTION 1: 并列排布 (Parallel Split Layout) — Left Content + Right Video   */}
+        {/* SECTION 1: Parallel Split Layout — Left Content + Right Video             */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-12 sm:mb-16">
           
@@ -233,7 +226,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN (lg:col-span-5): Anime Video Station (并列放置在右边) */}
+          {/* RIGHT COLUMN (lg:col-span-5): Anime Video Station */}
           <div className="lg:col-span-5">
             <div className="rounded-2xl border-2 border-amber-500/30 bg-zinc-950 shadow-2xl overflow-hidden relative group">
               {/* Trailer Selector Tabs on top of player */}
@@ -294,7 +287,7 @@ export function HeroSection() {
                           {currentTrailer.title}
                         </span>
                         <span className="text-[11px] text-amber-300 font-medium">
-                          ▶ 点击播放预告片段
+                          ▶ Play Official Trailer
                         </span>
                       </div>
                     </div>
@@ -314,7 +307,7 @@ export function HeroSection() {
               <div className="px-4 py-3 bg-zinc-950 border-t border-zinc-800/80 flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-zinc-300 font-medium">Paramount+ 原创动画首播</span>
+                  <span className="text-zinc-300 font-medium">Paramount+ Original Premiere</span>
                 </div>
                 <a
                   href="https://www.paramountplus.com"
@@ -322,7 +315,7 @@ export function HeroSection() {
                   rel="noopener noreferrer"
                   className="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1 transition-colors"
                 >
-                  <span>在线点播</span>
+                  <span>Stream Now</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </div>
@@ -331,7 +324,7 @@ export function HeroSection() {
         </div>
 
         {/* ========================================================================= */}
-        {/* SECTION 2: 7人专属放大头像动画阵容 (7-Character Big Avatar Anime Showcase) */}
+        {/* SECTION 2: 7-Character Big Avatar Anime Showcase                          */}
         {/* ========================================================================= */}
         <div id="characters-roster" className="pt-4">
           {/* Section Kicker Bar */}
@@ -349,7 +342,7 @@ export function HeroSection() {
               href="#characters"
               className="inline-flex items-center gap-1 text-xs font-semibold text-muted-foreground hover:text-amber-400 transition-colors"
             >
-              <span>查看全部 10 位 Avatar: Seven Havens characters</span>
+              <span>Explore All 10 Avatar: Seven Havens characters</span>
               <ChevronRight className="h-3.5 w-3.5" />
             </a>
           </div>
@@ -366,7 +359,7 @@ export function HeroSection() {
                 {/* Background Elemental Ambient Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-b ${char.glowGradient} opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`} />
 
-                {/* BIG AVATAR PORTRAIT (放大头像容器) */}
+                {/* BIG AVATAR PORTRAIT */}
                 <div className="relative mb-3">
                   <div className={`w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden ${char.ringClasses} transition-all duration-300 bg-zinc-900`}>
                     <img
@@ -387,8 +380,8 @@ export function HeroSection() {
                   <span className="text-sm sm:text-base font-bold text-foreground group-hover:text-amber-400 transition-colors block truncate">
                     {char.name}
                   </span>
-                  <span className="text-[11px] text-muted-foreground font-medium block">
-                    {char.nameZh}
+                  <span className="text-[11px] text-muted-foreground font-medium block truncate">
+                    {char.alias}
                   </span>
                 </div>
 
@@ -399,7 +392,7 @@ export function HeroSection() {
 
                 {/* Character Role Tag */}
                 <span className="text-[10px] text-muted-foreground/80 line-clamp-1 mb-2">
-                  Avatar: Seven Havens characters • {char.roleZh}
+                  Avatar: Seven Havens characters • {char.role}
                 </span>
 
                 {/* Hover Action Prompt */}

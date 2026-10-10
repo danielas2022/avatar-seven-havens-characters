@@ -35,7 +35,7 @@ export const CHARACTERS: Character[] = [
   {
     id: 'pavi',
     name: 'Pavi',
-    alias: 'The Reluctant Avatar (帕维 - 新降世神通)',
+    alias: 'The Reluctant Avatar',
     imageUrl: "/imgs/canon/pavi-canon-smile-face.png",
     bending: 'Earth',
     elementColor: 'from-amber-600 to-emerald-700 text-amber-500 border-amber-600/40',
@@ -104,7 +104,7 @@ Accompanied by her mischievous cat-monkey companion Geet, Pavi's personality mir
   {
     id: 'nisha',
     name: 'Nisha',
-    alias: 'The Fiery Twin Avatar (妮莎 - 双生降世神通)',
+    alias: 'The Fiery Twin Avatar',
     imageUrl: "/imgs/characters/nisha.jpg",
     bending: 'Avatar (Multi)',
     elementColor: 'from-orange-600 to-rose-700 text-rose-400 border-rose-500/40',
@@ -167,7 +167,7 @@ When her Avatar powers ignite alongside Pavi's during a catastrophic spirit incu
   {
     id: 'jae',
     name: 'Jae',
-    alias: 'Platoon Leader of the Bending Brigade (杰 - 御气排长)',
+    alias: 'Platoon Leader of the Bending Brigade',
     imageUrl: "/imgs/canon/jae-canon-face.png",
     bending: 'Air',
     elementColor: 'from-sky-500 to-indigo-600 text-sky-400 border-sky-500/40',

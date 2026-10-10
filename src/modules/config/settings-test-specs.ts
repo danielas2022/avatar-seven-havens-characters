@@ -58,14 +58,14 @@ export const testSpecs: Record<string, TestSpec> = {
   alipay: {
     group: 'alipay',
     fields: [
-      { name: 'amount', label: 'Amount (分)', type: 'number', defaultValue: '1', required: true },
+      { name: 'amount', label: 'Amount (cents)', type: 'number', defaultValue: '1', required: true },
       { name: 'description', label: 'Description', type: 'text', defaultValue: 'Test checkout' },
     ],
   },
   wechat: {
     group: 'wechat',
     fields: [
-      { name: 'amount', label: 'Amount (分)', type: 'number', defaultValue: '1', required: true },
+      { name: 'amount', label: 'Amount (cents)', type: 'number', defaultValue: '1', required: true },
       { name: 'description', label: 'Description', type: 'text', defaultValue: 'Test checkout' },
     ],
   },

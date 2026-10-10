@@ -143,7 +143,7 @@ export function getSettings(): Setting[] {
     },
     { name: 'creem_api_key', title: 'API Key', type: 'password', placeholder: 'creem_xxx', group: 'creem', tab: 'payment' },
     { name: 'creem_signing_secret', title: 'Signing Secret', type: 'password', placeholder: 'whsec_xxx', group: 'creem', tab: 'payment' },
-    { name: 'creem_test_amount', title: 'Test amount (cents)', type: 'number', placeholder: '留空使用实际金额，填 1 则支付 $0.01', group: 'creem', tab: 'payment' },
+    { name: 'creem_test_amount', title: 'Test amount (cents)', type: 'number', placeholder: 'Leave empty for actual amount, enter 1 for $0.01', group: 'creem', tab: 'payment' },
 
     // ─── Payment / PayPal ────────────────────────────────────────────
     { name: 'paypal_enabled', title: 'Enable PayPal', type: 'switch', group: 'paypal', tab: 'payment' },
@@ -158,7 +158,7 @@ export function getSettings(): Setting[] {
       ],
       group: 'paypal', tab: 'payment',
     },
-    { name: 'paypal_test_amount', title: 'Test amount (cents)', type: 'number', placeholder: '留空使用实际金额，填 1 则支付 $0.01', group: 'paypal', tab: 'payment' },
+    { name: 'paypal_test_amount', title: 'Test amount (cents)', type: 'number', placeholder: 'Leave empty for actual amount, enter 1 for $0.01', group: 'paypal', tab: 'payment' },
 
     // ─── Payment / Alipay ─────────────────────────────────────────────
     { name: 'alipay_enabled', title: 'Enable Alipay', type: 'switch', group: 'alipay', tab: 'payment' },
@@ -166,17 +166,17 @@ export function getSettings(): Setting[] {
     { name: 'alipay_private_key', title: 'Private Key (RSA2)', type: 'textarea', placeholder: 'MIIEvQIBADANBgkq...', group: 'alipay', tab: 'payment' },
     { name: 'alipay_public_key', title: 'Alipay Public Key', type: 'textarea', placeholder: 'MIIBIjANBgkq...', group: 'alipay', tab: 'payment' },
     { name: 'alipay_notify_url', title: 'Notify URL (Webhook)', type: 'text', placeholder: 'https://hersoul.cn/api/payment/notify/alipay', group: 'alipay', tab: 'payment' },
-    { name: 'alipay_test_amount', title: 'Test amount (分)', type: 'number', placeholder: '留空使用实际金额，填 1 则支付 ¥0.01', group: 'alipay', tab: 'payment' },
+    { name: 'alipay_test_amount', title: 'Test amount (cents)', type: 'number', placeholder: 'Leave empty for actual amount, enter 1 for ¥0.01', group: 'alipay', tab: 'payment' },
 
     // ─── Payment / WeChat Pay ───────────────────────────────────────
     { name: 'wechat_enabled', title: 'Enable WeChat Pay', type: 'switch', group: 'wechat', tab: 'payment' },
     { name: 'wechat_app_id', title: 'AppID', type: 'text', placeholder: 'wx1234567890', group: 'wechat', tab: 'payment' },
-    { name: 'wechat_mch_id', title: 'Merchant ID (商户号)', type: 'text', placeholder: '1900000001', group: 'wechat', tab: 'payment' },
-    { name: 'wechat_api_v3_key', title: 'APIv3 Key (32位密钥)', type: 'password', placeholder: '32 chars', group: 'wechat', tab: 'payment' },
+    { name: 'wechat_mch_id', title: 'Merchant ID', type: 'text', placeholder: '1900000001', group: 'wechat', tab: 'payment' },
+    { name: 'wechat_api_v3_key', title: 'APIv3 Key', type: 'password', placeholder: '32 chars', group: 'wechat', tab: 'payment' },
     { name: 'wechat_private_key', title: 'Merchant Private Key (PEM)', type: 'textarea', placeholder: 'MIIEvgIBADANBgkq...', group: 'wechat', tab: 'payment' },
     { name: 'wechat_serial_no', title: 'Certificate Serial No', type: 'text', placeholder: 'xxx', group: 'wechat', tab: 'payment' },
     { name: 'wechat_notify_url', title: 'Notify URL (Webhook)', type: 'text', placeholder: 'https://hersoul.cn/api/payment/notify/wechat', group: 'wechat', tab: 'payment' },
-    { name: 'wechat_test_amount', title: 'Test amount (分)', type: 'number', placeholder: '留空使用实际金额，填 1 则支付 ¥0.01', group: 'wechat', tab: 'payment' },
+    { name: 'wechat_test_amount', title: 'Test amount (cents)', type: 'number', placeholder: 'Leave empty for actual amount, enter 1 for ¥0.01', group: 'wechat', tab: 'payment' },
 
     // ─── Email / Resend ──────────────────────────────────────────────
     { name: 'resend_api_key', title: 'API Key', type: 'password', placeholder: 're_xxx', group: 'resend', tab: 'email' },
