@@ -8,28 +8,28 @@ export function HeroSection() {
 
   const trailerList = [
     {
-      tabName: 'Official Scene',
-      title: 'Official Key Scene: Pavi, Jae & Mount',
-      badge: 'Main Anime Scene • 2:14',
-      src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
+      tabName: 'Debut Teaser',
+      title: 'Avatar: Seven Havens - Official Series Teaser',
+      badge: 'Official Teaser • 1:30',
+      src: 'https://www.youtube-nocookie.com/embed/RvksPficuOU?autoplay=1&controls=1&rel=0',
       poster: '/imgs/canon/trio-key-scene.png',
-      desc: 'Pavi, Jae and their fluffy beast mount in the official animation still.',
+      desc: 'Paramount+ official debut teaser introducing Pavi discovering her Earthbending destiny.',
     },
     {
-      tabName: 'Past Avatars',
-      title: 'Pavi with Spirit Korra & Aang',
-      badge: 'Past Avatars • 1:45',
-      src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
+      tabName: 'Official Trailer',
+      title: 'Avatar: Seven Havens - Paramount+ Premiere Trailer',
+      badge: 'Official Trailer • 2:18',
+      src: 'https://www.youtube-nocookie.com/embed/ytauJfsyCE4?autoplay=1&controls=1&rel=0',
       poster: '/imgs/canon/pavi-spirits-official.png',
-      desc: 'Young Pavi spiritually connects with Korra and Aang.',
+      desc: 'Full cinematic trailer showcasing the fractured Avatar reincarnation and the Twin Avatars.',
     },
     {
-      tabName: 'Wasteland Patrol',
-      title: 'Haven Canyon Mount Patrol',
-      badge: 'Wasteland Patrol • 1:12',
-      src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
+      tabName: 'Avatar Universe',
+      title: 'Avatar Studios: Legacy of the Four Nations',
+      badge: 'Universe Retrospective • 2:25',
+      src: 'https://www.youtube-nocookie.com/embed/ByAn8DF8Ykk?autoplay=1&controls=1&rel=0',
       poster: '/imgs/canon/expedition-landscape.png',
-      desc: 'Pavi and Jae traversing the post-cataclysm ruins.',
+      desc: 'Avatar Studios universe lore connecting Aang, Korra, and the post-cataclysm Seven Havens era.',
     },
   ];
 

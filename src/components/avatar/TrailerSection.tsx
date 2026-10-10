@@ -48,7 +48,7 @@ export function TrailerSection() {
             {/* Embedded Paramount+ / Avatar Legends official YouTube trailer */}
             <iframe
               className="w-full h-full"
-              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=1&rel=0" 
+              src="https://www.youtube-nocookie.com/embed/ytauJfsyCE4?controls=1&rel=0" 
               title="Avatar: Seven Havens Official Trailer"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
