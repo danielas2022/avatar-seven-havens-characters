@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Sparkles, Compass, Users, GitFork, Film, Tv, Play, Layers, ExternalLink, ShieldAlert } from 'lucide-react';
-import { CHARACTERS } from '@/data/characters';
+import { Sparkles, Users, Film, Tv, Play, ExternalLink, ChevronRight, Volume2 } from 'lucide-react';
 import { Link } from '@tanstack/react-router';
 
 export function HeroSection() {
@@ -9,235 +8,410 @@ export function HeroSection() {
 
   const trailerList = [
     {
-      title: 'Official Key Scene: Pavi, Jae & Fluffy Mount',
-      badge: 'Main Anime Scene &bull; 2:14',
+      tabName: '正片剧照',
+      title: 'Official Key Scene: Pavi, Jae & Mount',
+      badge: 'Main Anime Scene • 2:14',
       src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
       poster: '/imgs/canon/trio-key-scene.png',
-      desc: 'The official colorful anime still featuring Pavi, Jae, and their furry horned companion.',
+      desc: 'Pavi, Jae and their fluffy beast mount in the official animation still.',
     },
     {
-      title: 'Pavi with Spirit Korra & Spirit Aang',
-      badge: 'Past Avatars &bull; 1:45',
+      tabName: '前代神通',
+      title: 'Pavi with Spirit Korra & Aang',
+      badge: 'Past Avatars • 1:45',
       src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
       poster: '/imgs/canon/pavi-spirits-official.png',
-      desc: 'Deep dive into the psychic bond between young Pavi and past Avatars Korra and Aang.',
+      desc: 'Young Pavi spiritually connects with Korra and Aang.',
     },
     {
-      title: 'Haven Desert Mount Expedition',
-      badge: 'Wasteland Patrol &bull; 1:12',
+      tabName: '荒漠远征',
+      title: 'Haven Canyon Mount Patrol',
+      badge: 'Wasteland Patrol • 1:12',
       src: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&rel=0',
       poster: '/imgs/canon/expedition-landscape.png',
-      desc: 'Pavi riding her beast mount alongside Jae navigating the ruined canyon wastes.',
+      desc: 'Pavi and Jae traversing the post-cataclysm ruins.',
     },
   ];
 
   const currentTrailer = trailerList[activeTrailerIndex];
 
+  // 7 Core Main Characters for the Grand Anime Showcase
+  const SEVEN_MAIN_CHARACTERS = [
+    {
+      id: 'pavi',
+      name: 'Pavi',
+      nameZh: '帕维',
+      role: 'The Reluctant Avatar',
+      roleZh: '新降世神通',
+      bending: 'Earth',
+      elementIcon: '🪨',
+      elementBadge: 'Earth (土)',
+      imageUrl: '/imgs/canon/pavi-canon-smile-face.png',
+      ringClasses: 'ring-2 ring-emerald-500/80 group-hover:ring-emerald-400 group-hover:shadow-[0_0_24px_rgba(16,185,129,0.55)]',
+      badgeClasses: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
+      glowGradient: 'from-emerald-500/15 via-transparent to-transparent',
+    },
+    {
+      id: 'nisha',
+      name: 'Nisha',
+      nameZh: '妮莎',
+      role: 'The Twin Avatar',
+      roleZh: '双生降世神通',
+      bending: 'Avatar',
+      elementIcon: '🔥',
+      elementBadge: 'Twin Avatar (双生)',
+      imageUrl: '/imgs/characters/nisha.jpg',
+      ringClasses: 'ring-2 ring-rose-500/80 group-hover:ring-rose-400 group-hover:shadow-[0_0_24px_rgba(244,63,94,0.55)]',
+      badgeClasses: 'bg-rose-500/15 text-rose-400 border-rose-500/30',
+      glowGradient: 'from-rose-500/15 via-transparent to-transparent',
+    },
+    {
+      id: 'jae',
+      name: 'Jae',
+      nameZh: '杰',
+      role: 'Airbender Officer',
+      roleZh: '御气护卫队长',
+      bending: 'Air',
+      elementIcon: '🌪️',
+      elementBadge: 'Air (气)',
+      imageUrl: '/imgs/canon/jae-canon-face.png',
+      ringClasses: 'ring-2 ring-sky-400/80 group-hover:ring-sky-300 group-hover:shadow-[0_0_24px_rgba(56,189,248,0.55)]',
+      badgeClasses: 'bg-sky-500/15 text-sky-400 border-sky-500/30',
+      glowGradient: 'from-sky-500/15 via-transparent to-transparent',
+    },
+    {
+      id: 'karthik',
+      name: 'Karthik',
+      nameZh: '卡尔蒂克',
+      role: 'Guard Commander',
+      roleZh: '防卫指挥官',
+      bending: 'Air',
+      elementIcon: '🌪️',
+      elementBadge: 'Air Commander (气)',
+      imageUrl: '/imgs/characters/karthik.png',
+      ringClasses: 'ring-2 ring-cyan-400/80 group-hover:ring-cyan-300 group-hover:shadow-[0_0_24px_rgba(6,182,212,0.55)]',
+      badgeClasses: 'bg-cyan-500/15 text-cyan-400 border-cyan-500/30',
+      glowGradient: 'from-cyan-500/15 via-transparent to-transparent',
+    },
+    {
+      id: 'daemin',
+      name: 'Daemin',
+      nameZh: '戴明',
+      role: 'Water Soldier',
+      roleZh: '御水突击先锋',
+      bending: 'Water',
+      elementIcon: '🌊',
+      elementBadge: 'Water (水)',
+      imageUrl: '/imgs/characters/daemin.png',
+      ringClasses: 'ring-2 ring-blue-500/80 group-hover:ring-blue-400 group-hover:shadow-[0_0_24px_rgba(59,130,246,0.55)]',
+      badgeClasses: 'bg-blue-500/15 text-blue-400 border-blue-500/30',
+      glowGradient: 'from-blue-500/15 via-transparent to-transparent',
+    },
+    {
+      id: 'agam',
+      name: 'Agam',
+      nameZh: '阿加姆',
+      role: 'Haven Matron',
+      roleZh: '避难所庇护者',
+      bending: 'Non-Bender',
+      elementIcon: '🛡️',
+      elementBadge: 'Haven Matron (体术)',
+      imageUrl: '/imgs/characters/agam.jpg',
+      ringClasses: 'ring-2 ring-amber-500/80 group-hover:ring-amber-400 group-hover:shadow-[0_0_24px_rgba(245,158,11,0.55)]',
+      badgeClasses: 'bg-amber-500/15 text-amber-400 border-amber-500/30',
+      glowGradient: 'from-amber-500/15 via-transparent to-transparent',
+    },
+    {
+      id: 'zi',
+      name: 'Zi',
+      nameZh: '齐长老',
+      role: 'Haven Elder',
+      roleZh: '避难所学者顾问',
+      bending: 'Non-Bender',
+      elementIcon: '📜',
+      elementBadge: 'Haven Scholar (学者)',
+      imageUrl: '/imgs/characters/zi.jpg',
+      ringClasses: 'ring-2 ring-purple-500/80 group-hover:ring-purple-400 group-hover:shadow-[0_0_24px_rgba(168,85,247,0.55)]',
+      badgeClasses: 'bg-purple-500/15 text-purple-400 border-purple-500/30',
+      glowGradient: 'from-purple-500/15 via-transparent to-transparent',
+    },
+  ];
+
   return (
-    <section className="relative overflow-hidden pt-6 pb-16 md:pt-10 md:pb-20 border-b border-border/40">
-      {/* Elemental Background Ambient Glows */}
+    <section className="relative overflow-hidden pt-6 pb-16 md:pt-8 md:pb-20 border-b border-border/40">
+      {/* Anime Cinematic Ambient Glows */}
       <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-amber-500/15 blur-3xl" />
-        <div className="absolute top-1/4 -right-32 w-96 h-96 rounded-full bg-sky-500/15 blur-3xl" />
-        <div className="absolute -bottom-32 left-1/3 w-96 h-96 rounded-full bg-rose-500/15 blur-3xl" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-amber-500/20 blur-3xl" />
+        <div className="absolute top-1/4 -right-32 w-96 h-96 rounded-full bg-sky-500/20 blur-3xl" />
+        <div className="absolute bottom-0 left-1/3 w-96 h-96 rounded-full bg-rose-500/15 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-        {/* Top Header Badge & Official Logo */}
-        <div className="text-center max-w-4xl mx-auto mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-500 border border-amber-500/30 mb-4 shadow-sm">
-            <Sparkles className="h-3.5 w-3.5 animate-spin" />
-            <span>Paramount+ Premiere &bull; October 9, 2026</span>
-            <span className="text-muted-foreground/60">&bull;</span>
-            <span className="text-foreground">Avatar Studios Official Animated Series</span>
-          </div>
-
-          {/* Official Title Logo */}
-          <div className="flex justify-center mb-3">
-            <img
-              src="/imgs/canon/avatar-seven-havens-logo.png"
-              alt="Avatar: Seven Havens Official Series Logo"
-              className="h-16 sm:h-20 w-auto object-contain drop-shadow-xl"
-            />
-          </div>
-
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground leading-[1.15] mb-4">
-            <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
-              Avatar: Seven Havens
-            </span>{' '}
-            Characters &amp; Lore Wiki
-          </h1>
-
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
-            The definitive anime guide for Paramount+&apos;s new animated epic. Meet the franchise&apos;s first Twin Avatars <strong className="text-foreground">Pavi</strong> &amp; <strong className="text-foreground">Nisha</strong>, airbender <strong className="text-foreground">Jae</strong>, the full voice cast, and explore the post-cataclysmic world 225 years after <em>The Legend of Korra</em>.
-          </p>
-
-          {/* Quick Section Jump Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-            <a
-              href="#characters"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-amber-600 hover:bg-amber-500 text-white shadow-md transition-all"
-            >
-              <Users className="h-4 w-4" />
-              <span>Explore 10 Characters</span>
-            </a>
-            <a
-              href="#gallery"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-card border border-border hover:border-amber-500/50 text-foreground transition-all"
-            >
-              <Layers className="h-4 w-4 text-amber-500" />
-              <span>Concept Art Gallery</span>
-            </a>
-            <a
-              href="#twin-spotlight"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-card border border-border hover:border-rose-500/50 text-foreground transition-all"
-            >
-              <Sparkles className="h-4 w-4 text-rose-400" />
-              <span>Twin Avatars Breakdown</span>
-            </a>
-            <Link
-              to="/episodes"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-card border border-border hover:border-sky-500/50 text-foreground transition-all"
-            >
-              <Tv className="h-4 w-4 text-sky-400" />
-              <span>Episode Tracker (13)</span>
-            </Link>
-          </div>
-        </div>
-
-        {/* Featured Video Trailer Section — FRONT & CENTER ON HOMEPAGE */}
-        <div className="max-w-4xl mx-auto rounded-3xl border-2 border-amber-500/30 bg-black/90 shadow-2xl overflow-hidden mb-12 relative group">
-          {/* Trailer Selectors */}
-          <div className="flex border-b border-border/80 bg-zinc-950/90 overflow-x-auto">
-            {trailerList.map((tr, idx) => (
-              <button
-                key={tr.title}
-                type="button"
-                onClick={() => {
-                  setActiveTrailerIndex(idx);
-                  setIsPlaying(false);
-                }}
-                className={`px-4 py-2.5 text-xs font-semibold whitespace-nowrap transition-colors flex items-center gap-2 border-b-2 ${
-                  activeTrailerIndex === idx
-                    ? 'border-amber-500 text-amber-400 bg-amber-500/10'
-                    : 'border-transparent text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                <Film className="h-3.5 w-3.5" />
-                <span>{tr.title}</span>
-              </button>
-            ))}
-          </div>
-
-          <div className="relative aspect-video w-full flex items-center justify-center bg-zinc-950">
-            {isPlaying ? (
-              <iframe
-                className="w-full h-full"
-                src={currentTrailer.src}
-                title={currentTrailer.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <div
-                className="relative w-full h-full cursor-pointer overflow-hidden flex items-center justify-center"
-                onClick={() => setIsPlaying(true)}
-              >
-                {/* Poster Background */}
-                <img
-                  src={currentTrailer.poster}
-                  alt={currentTrailer.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/40" />
-
-                {/* Animated Play Button */}
-                <div className="relative z-10 flex flex-col items-center gap-3">
-                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-gradient-to-tr from-amber-600 via-orange-500 to-rose-600 text-white flex items-center justify-center shadow-2xl shadow-orange-500/50 group-hover:scale-110 transition-transform">
-                    <Play className="h-8 w-8 fill-white translate-x-0.5" />
-                  </div>
-                  <div className="text-center px-4">
-                    <span className="text-sm sm:text-base font-bold text-white tracking-wide block drop-shadow-md">
-                      {currentTrailer.title}
-                    </span>
-                    <span className="text-xs text-amber-300 font-medium drop-shadow">
-                      Click to Play &bull; Paramount+
-                    </span>
-                  </div>
-                </div>
-
-                {/* Top Corner Badge */}
-                <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-rose-600/90 text-white shadow-md backdrop-blur-md flex items-center gap-1.5">
-                    <Film className="h-3.5 w-3.5" />
-                    <span>{currentTrailer.badge}</span>
-                  </span>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Under-Player Information Bar */}
-          <div className="p-4 sm:p-5 bg-card border-t border-border/80 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <span className="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 font-mono text-xs font-bold">
-                NOW STREAMING
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* ========================================================================= */}
+        {/* SECTION 1: 并列排布 (Parallel Split Layout) — Left Content + Right Video   */}
+        {/* ========================================================================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-12 sm:mb-16">
+          
+          {/* LEFT COLUMN (lg:col-span-7): Anime Brand Title & Hook */}
+          <div className="lg:col-span-7 flex flex-col justify-center text-left">
+            {/* Live Streaming Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30 mb-4 shadow-sm w-fit">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
               </span>
-              <p className="text-xs text-muted-foreground">
-                Episodes 1&ndash;3 Premiered October 9, 2026 on Paramount+
-              </p>
+              <span className="font-bold tracking-wide">PARAMOUNT+ PREMIERE</span>
+              <span className="text-muted-foreground/60">&bull;</span>
+              <span className="text-foreground font-medium">October 9, 2026</span>
+              <span className="text-muted-foreground/60 hidden sm:inline">&bull;</span>
+              <span className="text-amber-300 font-semibold hidden sm:inline">Avatar Studios Official</span>
             </div>
-            <div className="flex items-center gap-3">
+
+            {/* Official Series Logo */}
+            <div className="mb-4">
+              <img
+                src="/imgs/canon/avatar-seven-havens-logo.png"
+                alt="Avatar: Seven Havens Official Series Logo"
+                className="h-12 sm:h-16 lg:h-20 w-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)]"
+              />
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-[1.15] mb-4">
+              <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
+                The Twin Avatars
+              </span>{' '}
+              Characters &amp; Lore Wiki
+            </h1>
+
+            {/* Anime Synopsis */}
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6 max-w-xl">
+              225 years after <span className="text-foreground font-semibold">The Legend of Korra</span>, the sacred reincarnation cycle fractures into twin sisters <strong className="text-amber-400 font-semibold">Pavi</strong> (Earth) &amp; <strong className="text-rose-400 font-semibold">Nisha</strong>. Explore the full 7 core cast, airbender guard <strong className="text-sky-400 font-semibold">Jae</strong>, official leaked concept art, relationship charts, and episode trackers.
+            </p>
+
+            {/* Action CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-3 mb-6">
               <a
-                href="https://www.paramountplus.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-semibold text-foreground hover:text-amber-500 flex items-center gap-1 transition-colors"
+                href="#characters-roster"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white shadow-lg shadow-orange-600/25 transition-all transform hover:-translate-y-0.5"
               >
-                <span>Stream on Paramount+</span>
-                <ExternalLink className="h-3.5 w-3.5" />
+                <Users className="h-4 w-4" />
+                <span>Explore 7 Key Cast</span>
               </a>
-              <span className="text-border">|</span>
+
+              <button
+                type="button"
+                onClick={() => setIsPlaying(true)}
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-zinc-900/90 hover:bg-zinc-800 text-amber-400 border border-amber-500/40 shadow-sm transition-all"
+              >
+                <Play className="h-4 w-4 fill-amber-400" />
+                <span>Play Debut Trailer</span>
+              </button>
+
               <Link
                 to="/episodes"
-                className="text-xs font-semibold text-amber-500 hover:text-amber-400 flex items-center gap-1 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-card hover:bg-muted/60 text-foreground border border-border/80 transition-all"
               >
-                <span>Episode Guide</span>
-                <Tv className="h-3.5 w-3.5" />
+                <Tv className="h-4 w-4 text-sky-400" />
+                <span>13 Episodes</span>
               </Link>
+            </div>
+
+            {/* Meta Tags */}
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-muted-foreground border-t border-border/40 pt-4">
+              <div className="flex items-center gap-1.5">
+                <Sparkles className="h-3.5 w-3.5 text-amber-400" />
+                <span>Book 1: Havens</span>
+              </div>
+              <span className="text-border">&bull;</span>
+              <div>Studio: <span className="text-foreground font-medium">Avatar Studios</span></div>
+              <span className="text-border">&bull;</span>
+              <div>Network: <span className="text-foreground font-medium">Paramount+</span></div>
+              <span className="text-border">&bull;</span>
+              <div>Era: <span className="text-foreground font-medium">Post-Cataclysm (7 Havens)</span></div>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN (lg:col-span-5): Anime Video Station (并列放置在右边) */}
+          <div className="lg:col-span-5">
+            <div className="rounded-2xl border-2 border-amber-500/30 bg-zinc-950 shadow-2xl overflow-hidden relative group">
+              {/* Trailer Selector Tabs on top of player */}
+              <div className="flex border-b border-zinc-800/80 bg-zinc-900/95 overflow-x-auto p-1.5 gap-1.5">
+                {trailerList.map((tr, idx) => (
+                  <button
+                    key={tr.title}
+                    type="button"
+                    onClick={() => {
+                      setActiveTrailerIndex(idx);
+                      setIsPlaying(false);
+                    }}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 ${
+                      activeTrailerIndex === idx
+                        ? 'bg-amber-500/20 text-amber-400 border border-amber-500/40 shadow-sm'
+                        : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/60'
+                    }`}
+                  >
+                    <Film className="h-3.5 w-3.5" />
+                    <span>{tr.tabName}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Video Player Display */}
+              <div className="relative aspect-video w-full bg-black overflow-hidden flex items-center justify-center">
+                {isPlaying ? (
+                  <iframe
+                    className="w-full h-full"
+                    src={currentTrailer.src}
+                    title={currentTrailer.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div
+                    className="relative w-full h-full cursor-pointer group/player flex items-center justify-center"
+                    onClick={() => setIsPlaying(true)}
+                  >
+                    {/* Poster Image */}
+                    <img
+                      src={currentTrailer.poster}
+                      alt={currentTrailer.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover/player:scale-105 opacity-90"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-black/30" />
+
+                    {/* Anime Glowing Pulsing Play Button */}
+                    <div className="relative z-10 flex flex-col items-center gap-2.5">
+                      <div className="relative">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500/40 opacity-75"></span>
+                        <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-full bg-gradient-to-tr from-amber-600 via-orange-500 to-rose-600 text-white flex items-center justify-center shadow-2xl shadow-orange-500/50 group-hover/player:scale-110 transition-transform">
+                          <Play className="h-7 w-7 fill-white translate-x-0.5" />
+                        </div>
+                      </div>
+                      <div className="text-center px-4">
+                        <span className="text-xs sm:text-sm font-bold text-white tracking-wide block drop-shadow-md">
+                          {currentTrailer.title}
+                        </span>
+                        <span className="text-[11px] text-amber-300 font-medium">
+                          ▶ 点击播放预告片段
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Corner Tag */}
+                    <div className="absolute top-3 left-3 z-10">
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-600/90 text-white shadow-md backdrop-blur-sm flex items-center gap-1">
+                        <Film className="h-3 w-3" />
+                        <span>{currentTrailer.badge}</span>
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Player Underbar */}
+              <div className="px-4 py-3 bg-zinc-950 border-t border-zinc-800/80 flex items-center justify-between text-xs">
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-zinc-300 font-medium">Paramount+ 原创动画首播</span>
+                </div>
+                <a
+                  href="https://www.paramountplus.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1 transition-colors"
+                >
+                  <span>在线点播</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Quick Character Portrait Strip */}
-        <div className="mb-4 text-center">
-          <span className="text-xs uppercase tracking-wider font-semibold text-muted-foreground block mb-3">
-            Quick Jump to Featured Characters
-          </span>
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
-            {CHARACTERS.slice(0, 7).map((c) => (
+        {/* ========================================================================= */}
+        {/* SECTION 2: 7人专属放大头像动画阵容 (7-Character Big Avatar Anime Showcase) */}
+        {/* ========================================================================= */}
+        <div id="characters-roster" className="pt-4">
+          {/* Section Kicker Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-6 pb-3 border-b border-border/60">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-500 mb-1">
+                <Sparkles className="h-3.5 w-3.5" />
+                <span>CORE ANIME CAST &bull; 7 KEY PROTAGONISTS</span>
+              </div>
+              <h2 className="text-lg sm:text-xl font-bold text-foreground">
+                首播核心主角阵容（点击头像直达专属维基档案）
+              </h2>
+            </div>
+            <a
+              href="#characters"
+              className="inline-flex items-center gap-1 text-xs font-semibold text-muted-foreground hover:text-amber-400 transition-colors"
+            >
+              <span>查看全部 10 位角色</span>
+              <ChevronRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+
+          {/* 7 Big Character Cards Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3.5 sm:gap-4">
+            {SEVEN_MAIN_CHARACTERS.map((char) => (
               <Link
-                key={c.id}
+                key={char.id}
                 to="/characters/$slug"
-                params={{ slug: c.id }}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-border/80 bg-card hover:border-amber-500/50 hover:bg-muted/50 transition-all group shadow-sm"
+                params={{ slug: char.id }}
+                className="group relative rounded-2xl bg-card/90 border border-border/80 hover:border-amber-500/60 p-3 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1.5 shadow-md hover:shadow-xl overflow-hidden"
               >
-                <img
-                  src={c.imageUrl}
-                  alt={c.name}
-                  className="h-6 w-6 rounded-full object-cover object-top border border-border/60 group-hover:scale-110 transition-transform"
-                />
-                <span className="text-xs font-bold text-foreground group-hover:text-amber-500 transition-colors">
-                  {c.name}
+                {/* Background Elemental Ambient Gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-b ${char.glowGradient} opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`} />
+
+                {/* BIG AVATAR PORTRAIT (放大头像容器) */}
+                <div className="relative mb-3">
+                  <div className={`w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl overflow-hidden ${char.ringClasses} transition-all duration-300 bg-zinc-900`}>
+                    <img
+                      src={char.imageUrl}
+                      alt={char.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+
+                  {/* Element Icon Pip */}
+                  <span className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-background border border-border flex items-center justify-center text-xs shadow-md">
+                    {char.elementIcon}
+                  </span>
+                </div>
+
+                {/* Character Name in Bold */}
+                <div className="mb-1 w-full">
+                  <span className="text-sm sm:text-base font-bold text-foreground group-hover:text-amber-400 transition-colors block truncate">
+                    {char.name}
+                  </span>
+                  <span className="text-[11px] text-muted-foreground font-medium block">
+                    {char.nameZh}
+                  </span>
+                </div>
+
+                {/* Element Badge */}
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold border ${char.badgeClasses} mb-1.5`}>
+                  {char.elementBadge}
                 </span>
-                <span className="text-[10px] text-muted-foreground">
-                  ({c.bending.split(' ')[0]})
+
+                {/* Character Role Tag */}
+                <span className="text-[10px] text-muted-foreground/80 line-clamp-1 mb-2">
+                  {char.roleZh}
+                </span>
+
+                {/* Hover Action Prompt */}
+                <span className="mt-auto text-[10px] font-bold text-amber-500/0 group-hover:text-amber-400 transition-all flex items-center gap-0.5">
+                  <span>查看人物志</span>
+                  <ChevronRight className="h-3 w-3" />
                 </span>
               </Link>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
