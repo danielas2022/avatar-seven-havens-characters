@@ -22,15 +22,19 @@ export function SiteHeader() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-amber-600 via-orange-500 to-emerald-500 flex items-center justify-center shadow-md shadow-amber-500/10 group-hover:scale-105 transition-transform">
-            <Compass className="h-5 w-5 text-white animate-pulse" />
+          <div className="relative h-10 w-10 rounded-full overflow-hidden ring-2 ring-amber-500/70 shadow-md shadow-amber-500/25 group-hover:scale-105 group-hover:ring-amber-400 transition-all shrink-0 bg-amber-950/40">
+            <img
+              src="/imgs/avatar-brand-logo.png"
+              alt="Avatar Pavi & Geet"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-serif font-bold text-base tracking-tight leading-none bg-gradient-to-r from-amber-400 via-orange-300 to-emerald-400 bg-clip-text text-transparent">
               Avatar: Seven Havens
             </span>
             <span className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">
-              Character Guide & Lore
+              Character Guide &amp; Lore
             </span>
           </div>
         </Link>

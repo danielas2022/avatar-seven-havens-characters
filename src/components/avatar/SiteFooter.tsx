@@ -9,8 +9,12 @@ export function SiteFooter() {
           {/* Brand Info */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2">
-              <div className="h-7 w-7 rounded-lg bg-gradient-to-tr from-amber-600 via-orange-500 to-emerald-500 flex items-center justify-center text-white">
-                <Compass className="h-4 w-4" />
+              <div className="relative h-8 w-8 rounded-full overflow-hidden ring-2 ring-amber-500/60 shrink-0 bg-amber-950/40">
+                <img
+                  src="/imgs/avatar-brand-logo.png"
+                  alt="Avatar Pavi"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <span className="font-serif font-bold text-sm text-foreground">
                 Avatar: Seven Havens Characters
