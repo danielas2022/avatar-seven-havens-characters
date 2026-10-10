@@ -30,6 +30,28 @@ function HomePage() {
         <TrailerSection />
         <EpisodeGuide />
         <FAQSection />
+
+        {/* SEO Canonical Keywords Index */}
+        <section className="py-8 bg-muted/20 border-t border-border/40 text-xs text-muted-foreground">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+            <h3 className="font-semibold text-foreground text-xs uppercase tracking-wider mb-2">
+              Official Avatar: Seven Havens Characters Index &amp; Topic Directory
+            </h3>
+            <p className="text-[11px] leading-relaxed mb-3">
+              Explore every entry in our database for Avatar: Seven Havens characters. Covering twin Avatar: Seven Havens characters Pavi and Nisha, airbending Avatar: Seven Havens characters Jae and Karthik, waterbending Avatar: Seven Havens characters Daemin, and non-bending Avatar: Seven Havens characters Agam and Zi. This community directory indexes voice cast credits, episode timelines, concept art, and lore for all Avatar: Seven Havens characters.
+            </p>
+            <div className="flex flex-wrap gap-2 text-[10px]">
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Pavi (Earth Avatar)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Nisha (Twin Avatar)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Jae (Airbender Leader)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Karthik (Guard Commander)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Daemin (Waterbender)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Agam (Haven Caretaker)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Zi (Wasteland Scout)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Geet &amp; Ruhi (Creatures)</span>
+            </div>
+          </div>
+        </section>
       </main>
       <SiteFooter />
     </div>

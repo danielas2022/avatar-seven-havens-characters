@@ -27,10 +27,10 @@ export function VoiceCastTable() {
             <span>Voice Actors & Production Crew</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            Avatar: Seven Havens Voice Cast & Credits
+            Voice Cast of Avatar: Seven Havens Characters
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            From franchise legend Dee Bradley Baker returning for twin cat-monkeys to Saheli Khan and Darren Barnet, meet the talent bringing the Seven Havens to life.
+            From Dee Bradley Baker to Saheli Khan, meet the talented actors voicing all official Avatar: Seven Havens characters.
           </p>
         </div>
 
@@ -53,14 +53,14 @@ export function VoiceCastTable() {
             ))}
           </div>
 
-          <div className="relative w-full sm:w-64">
+          <div className="relative w-full sm:w-72">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search actor or character..."
-              className="w-full pl-9 pr-4 py-1.5 rounded-lg text-xs sm:text-sm bg-muted/50 border border-border focus:outline-none focus:ring-1 focus:ring-emerald-500 text-foreground"
+              placeholder="Search cast of Avatar: Seven Havens characters..."
+              className="w-full pl-9 pr-4 py-1.5 rounded-lg text-xs sm:text-sm bg-muted/50 border border-border focus:outline-none focus:ring-1 focus:ring-emerald-500 text-foreground placeholder:text-muted-foreground"
             />
           </div>
         </div>
@@ -91,7 +91,7 @@ export function VoiceCastTable() {
                         {member.name}
                       </h3>
                       <p className="text-xs font-semibold text-emerald-400">
-                        as {member.character}
+                        as {member.character} (Avatar: Seven Havens characters roster)
                       </p>
                     </div>
                   </div>

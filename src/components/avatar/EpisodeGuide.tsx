@@ -23,10 +23,10 @@ export function EpisodeGuide() {
             <span>Book 1: Havens &bull; 13 Episodes &bull; Paramount+</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            Avatar: Seven Havens Episode Tracker
+            Avatar: Seven Havens Characters Episode Guide &amp; Air Schedule
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Continuously updated broadcast calendar, synopsis breakdowns, and key character debuts for the brand-new 2026 series.
+            Continuously updated broadcast calendar, synopsis breakdowns, and key debuts for all official Avatar: Seven Havens characters.
           </p>
         </div>
 
@@ -133,8 +133,8 @@ export function EpisodeGuide() {
                 </div>
 
                 <div className="pt-3 border-t border-border/80">
-                  <span className="text-[10px] uppercase font-semibold text-muted-foreground tracking-wider block mb-1.5">
-                    Key Appearances:
+                  <span className="text-[10px] font-semibold text-muted-foreground tracking-wide block mb-1.5">
+                    Avatar: Seven Havens characters featured:
                   </span>
                   <div className="flex flex-wrap gap-1 mb-3">
                     {ep.keyCharacters.map((char) => (

@@ -180,14 +180,14 @@ export function HeroSection() {
             {/* Main Headline */}
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-[1.15] mb-4">
               <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
-                The Twin Avatars
+                Avatar: Seven Havens Characters
               </span>{' '}
-              Characters &amp; Lore Wiki
+              Guide &amp; Wiki
             </h1>
 
             {/* Anime Synopsis */}
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6 max-w-xl">
-              225 years after <span className="text-foreground font-semibold">The Legend of Korra</span>, the sacred reincarnation cycle fractures into twin sisters <strong className="text-amber-400 font-semibold">Pavi</strong> (Earth) &amp; <strong className="text-rose-400 font-semibold">Nisha</strong>. Explore the full 7 core cast, airbender guard <strong className="text-sky-400 font-semibold">Jae</strong>, official leaked concept art, relationship charts, and episode trackers.
+              The definitive wiki for all official <strong className="text-foreground">Avatar: Seven Havens characters</strong>. 225 years after <em>The Legend of Korra</em>, explore twin Avatars <strong className="text-amber-400 font-semibold">Pavi</strong> (Earth) &amp; <strong className="text-rose-400 font-semibold">Nisha</strong>, airbender guard <strong className="text-sky-400 font-semibold">Jae</strong>, voice cast, and detailed backstories for every one of the Avatar: Seven Havens characters.
             </p>
 
             {/* Action CTA Buttons */}
@@ -197,7 +197,7 @@ export function HeroSection() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white shadow-lg shadow-orange-600/25 transition-all transform hover:-translate-y-0.5"
               >
                 <Users className="h-4 w-4" />
-                <span>Explore 7 Key Cast</span>
+                <span>Explore Avatar: Seven Havens characters</span>
               </a>
 
               <button
@@ -339,17 +339,17 @@ export function HeroSection() {
             <div>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-500 mb-1">
                 <Sparkles className="h-3.5 w-3.5" />
-                <span>CORE ANIME CAST &bull; 7 KEY PROTAGONISTS</span>
+                <span>CORE ANIME CAST &bull; 7 KEY AVATAR: SEVEN HAVENS CHARACTERS</span>
               </div>
               <h2 className="text-lg sm:text-xl font-bold text-foreground">
-                首播核心主角阵容（点击头像直达专属维基档案）
+                Official Avatar: Seven Havens Characters Roster
               </h2>
             </div>
             <a
               href="#characters"
               className="inline-flex items-center gap-1 text-xs font-semibold text-muted-foreground hover:text-amber-400 transition-colors"
             >
-              <span>查看全部 10 位角色</span>
+              <span>查看全部 10 位 Avatar: Seven Havens characters</span>
               <ChevronRight className="h-3.5 w-3.5" />
             </a>
           </div>
@@ -399,12 +399,12 @@ export function HeroSection() {
 
                 {/* Character Role Tag */}
                 <span className="text-[10px] text-muted-foreground/80 line-clamp-1 mb-2">
-                  {char.roleZh}
+                  Avatar: Seven Havens characters • {char.roleZh}
                 </span>
 
                 {/* Hover Action Prompt */}
                 <span className="mt-auto text-[10px] font-bold text-amber-500/0 group-hover:text-amber-400 transition-all flex items-center gap-0.5">
-                  <span>查看人物志</span>
+                  <span>Avatar: Seven Havens characters profile</span>
                   <ChevronRight className="h-3 w-3" />
                 </span>
               </Link>

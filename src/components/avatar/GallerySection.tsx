@@ -116,10 +116,10 @@ export function GallerySection() {
             <span>Official Art &amp; Leaked Design Archives</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            Production Art &amp; Character Model Sheets
+            Production Art of Avatar: Seven Havens Characters
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Explore authentic canon artwork from Paramount+ and Avatar Studios, including character turnarounds for Pavi and Jae, past Avatar spirit guides, and environmental concept stills.
+            Explore authentic canon artwork and model sheets featuring Avatar: Seven Havens characters, including character turnarounds for Pavi and Jae, past Avatar spirit guides, and environmental concept stills.
           </p>
 
           {/* Category Filter Tabs */}

@@ -19,10 +19,10 @@ export function FAQSection() {
             <span>Frequently Asked Questions</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            Everything You Need to Know About Avatar: Seven Havens
+            Frequently Asked Questions About Avatar: Seven Havens Characters
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Answers to common questions regarding the new Avatars Pavi and Nisha, voice cast, timeline post-Korra, and streaming details.
+            Answers to common questions regarding official Avatar: Seven Havens characters, twin Avatars Pavi and Nisha, voice cast, and lore.
           </p>
         </div>
 

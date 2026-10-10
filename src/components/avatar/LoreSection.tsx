@@ -17,10 +17,10 @@ export function LoreSection() {
             <span>Post-Cataclysm Worldbuilding</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            The Lore of the Seven Havens
+            World Lore of Avatar: Seven Havens Characters
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Set 225 years after <em>The Legend of Korra</em>, explore the historical apocalypse, the isolated city-states, and the tragic inversion of the Avatar legend.
+            Set 225 years after <em>The Legend of Korra</em>, explore how the historical apocalypse and the isolated Seven Havens shape the lives of all Avatar: Seven Havens characters.
           </p>
         </div>
 

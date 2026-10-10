@@ -21,8 +21,8 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="max-w-md leading-relaxed text-xs">
-              The premier community guide and wiki dedicated to Paramount+ and Avatar Studios&apos; 2026 series <em>Avatar: Seven Havens</em>.
-              Cataloging Pavi, Nisha, Jae, the voice cast, relationships, and the post-cataclysmic world.
+              The premier community guide and wiki dedicated to all official Avatar: Seven Havens characters.
+              Comprehensive profiles, voice actors, relationships, and episodes for Avatar: Seven Havens characters in the post-cataclysmic world.
             </p>
           </div>
 
@@ -39,27 +39,27 @@ export function SiteFooter() {
               </li>
               <li>
                 <a href="/#twin-spotlight" className="hover:text-foreground transition-colors">
-                  Pavi & Nisha (Twins)
+                  Twin Avatar: Seven Havens characters
                 </a>
               </li>
               <li>
                 <Link to="/voice-cast" className="hover:text-foreground transition-colors">
-                  Voice Cast & Credits
+                  Voice Cast &amp; Credits
                 </Link>
               </li>
               <li>
                 <Link to="/relationship-chart" className="hover:text-foreground transition-colors">
-                  Relationship Map
+                  Relationship Map of Avatar: Seven Havens characters
                 </Link>
               </li>
               <li>
                 <Link to="/lore" className="hover:text-foreground transition-colors">
-                  World Lore & Havens
+                  World Lore &amp; Havens
                 </Link>
               </li>
               <li>
                 <Link to="/episodes" className="hover:text-foreground transition-colors">
-                  Book 1 Episodes
+                  Episodes with Avatar: Seven Havens characters
                 </Link>
               </li>
             </ul>
@@ -98,7 +98,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link to="/characters/$slug" params={{ slug: 'geet-ruhi' }} className="hover:text-foreground transition-colors">
-                  Geet & Ruhi (Cat-Monkeys)
+                  Geet &amp; Ruhi (Cat-Monkeys)
                 </Link>
               </li>
             </ul>

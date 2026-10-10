@@ -46,10 +46,10 @@ export function CharacterGrid() {
             <span>Official Character Gallery & Roster</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            Avatar: Seven Havens Characters
+            Avatar: Seven Havens Characters Database &amp; Roster
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Official portraits, bending affinities, voice actors, and backstories across the Seven Havens.
+            Official profiles, bending affinities, voice actors, and backstories for all Avatar: Seven Havens characters across the Seven Havens.
           </p>
         </div>
 
@@ -141,6 +141,10 @@ export function CharacterGrid() {
 
                 {/* Card Body */}
                 <div className="p-5 pt-3">
+                  <div className="text-[10px] font-semibold text-amber-500/90 tracking-wide uppercase mb-2">
+                    Official Avatar: Seven Havens characters entry
+                  </div>
+
                   {/* Voice Actor Credit */}
                   <div className="flex items-center gap-1.5 text-xs text-foreground/90 mb-3 bg-muted/50 px-2.5 py-1.5 rounded-lg border border-border/40">
                     <UserCheck className="h-3.5 w-3.5 text-amber-500 shrink-0" />
@@ -178,7 +182,7 @@ export function CharacterGrid() {
                   params={{ slug: char.id }}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-amber-500 hover:text-amber-400 group-hover:translate-x-1 transition-all"
                 >
-                  <span>Explore Bio</span>
+                  <span>Explore Character Profile</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>

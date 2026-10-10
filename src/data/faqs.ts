@@ -7,47 +7,52 @@ export interface FAQItem {
 export const FAQS: FAQItem[] = [
   {
     category: 'Characters',
-    question: 'Who is the new Avatar in Avatar: Seven Havens?',
-    answer: 'The new series introduces two Avatars: Pavi, a nine-year-old earthbender voiced by Saheli Khan, and her long-lost identical twin sister Nisha, voiced by Aishu Devan. This marks the first time in the 10,000-year Avatar franchise history that the Avatar mantle is shared between twin Avatars.'
+    question: 'Who are the central Avatar: Seven Havens characters?',
+    answer: 'The central Avatar: Seven Havens characters are twin Avatars Pavi and Nisha, accompanied by airbender guard officer Jae, Commander Karthik, waterbender Daemin, haven caretaker Agam, scholar Zi, and creature companions Geet and Ruhi. Together, these Avatar: Seven Havens characters navigate a post-apocalyptic world 225 years after The Legend of Korra.'
   },
   {
     category: 'Characters',
-    question: 'Why are there two Avatars in Seven Havens?',
-    answer: 'In the aftermath of the global "Cataclysm" that ruptured the physical and spirit worlds 225 years after The Legend of Korra, the reincarnation cycle underwent a cosmic split. Twins Pavi and Nisha share the spiritual legacy of Raava, each manifesting distinct elemental proficiencies and a powerful psychic twin resonance.'
+    question: 'Which Avatar: Seven Havens characters are the new twin Avatars?',
+    answer: 'Pavi and Nisha are the primary twin Avatar: Seven Havens characters who share the fractured spirit of Raava. Unlike prior incarnations, these two Avatar: Seven Havens characters divide the Avatar abilities between earth and fiery multi-elemental bending.'
   },
   {
     category: 'Characters',
-    question: 'Who are the main companions in Avatar: Seven Havens?',
-    answer: 'Pavi and Nisha are accompanied by Jae (an airbender platoon leader from the Haven of Ellora voiced by Major Curda), Captain Karthik (an airbender commander voiced by Akshay Khanna), Daemin (a loyal waterbender voiced by Darren Barnet), Zi (a desert scout voiced by Dianne Doan), Agam (a haven elder voiced by Sakina Jaffrey), and twin cat-monkeys Geet and Ruhi (voiced by Dee Bradley Baker).'
+    question: 'Who are the airbending Avatar: Seven Havens characters?',
+    answer: 'The primary airbending Avatar: Seven Havens characters are Jae, an air guard officer from the Haven of Ellora, and Captain Karthik. These skilled Avatar: Seven Havens characters risk their ranks to defend and guide the young twin Avatars.'
   },
   {
     category: 'Cast & Production',
-    question: 'Who voices Pavi and Nisha in Avatar: Seven Havens?',
-    answer: 'Pavi is voiced by young actress Saheli Khan, while her twin sister Nisha is voiced by Aishu Devan. Creature voices for their animal companions Geet and Ruhi are performed by franchise veteran Dee Bradley Baker (the voice of Appa and Momo in ATLA).'
+    question: 'Who voices the main Avatar: Seven Havens characters?',
+    answer: 'The voice cast bringing the Avatar: Seven Havens characters to life includes rising star Saheli Khan as Pavi, Aishu Devan as twin sister Nisha, and Major Curda as Jae. Legendary creature voice actor Dee Bradley Baker also returns to voice animal Avatar: Seven Havens characters Geet and Ruhi.'
   },
   {
     category: 'Cast & Production',
-    question: 'Who created Avatar: Seven Havens?',
-    answer: 'Avatar: Seven Havens is created and executive produced by Michael Dante DiMartino and Bryan Konietzko, the original creators of Avatar: The Last Airbender and The Legend of Korra, produced through Avatar Studios for Paramount+.'
+    question: 'Who created the new Avatar: Seven Havens characters and world?',
+    answer: 'The Avatar: Seven Havens characters and universe were created by original series creators Michael Dante DiMartino and Bryan Konietzko, produced by Avatar Studios exclusively for Paramount+.'
   },
   {
     category: 'Plot & Lore',
-    question: 'When is Avatar: Seven Havens set in the Avatar timeline?',
-    answer: 'The series is set approximately 225 years after the conclusion of The Legend of Korra, placing it in a post-cataclysmic era where the technological society of Republic City has fallen into ancient legend and humanity lives in seven fortified sanctuaries called the Seven Havens.'
+    question: 'How do elemental bendings divide among Avatar: Seven Havens characters?',
+    answer: 'Elemental gifts among Avatar: Seven Havens characters include earthbending (Pavi), multi-elemental avatar powers (Nisha), airbending (Jae and Karthik), and waterbending (Daemin). Respected non-bending Avatar: Seven Havens characters include caretaker Agam and scholar Zi.'
   },
   {
     category: 'Plot & Lore',
-    question: 'Why do people fear the Avatar in Seven Havens?',
-    answer: 'In this era, humanity blames the Avatar for causing the catastrophic "Cataclysm" that destroyed the Four Nations two centuries prior. Instead of being celebrated as guardians of peace, the Avatar is feared as a mythical harbinger of planetary destruction and hunted by city councils and bounty envoys.'
+    question: 'Why do citizens of the Seven Havens fear the Avatar: Seven Havens characters?',
+    answer: 'In this era, survivors blame the Avatar for the historic Cataclysm that collapsed civilization. Consequently, bounty envoys hunt the twin Avatar: Seven Havens characters, forcing them into hiding.'
+  },
+  {
+    category: 'Plot & Lore',
+    question: 'Are there returning spirit mentors among Avatar: Seven Havens characters?',
+    answer: 'Yes, spiritual visions of past Avatars Korra and Aang appear to guide the young Avatar: Seven Havens characters as they learn to master their fractured cosmic connection.'
   },
   {
     category: 'Release & Streaming',
-    question: 'When did Avatar: Seven Havens premiere and where can I watch it?',
-    answer: 'Avatar: Seven Havens officially premiered on Paramount+ on Friday, October 9, 2026, debuting with its first three episodes ("On the Horizon", "Into the Storm", "The Order"). The remaining episodes of Book 1 release on a weekly schedule.'
+    question: 'When did episodes featuring the Avatar: Seven Havens characters premiere?',
+    answer: 'Episodes featuring the Avatar: Seven Havens characters premiered on Paramount+ on Friday, October 9, 2026, debuting with three episodes. All 13 episodes showcase the journeys of these Avatar: Seven Havens characters.'
   },
   {
     category: 'Release & Streaming',
-    question: 'How many episodes and seasons are planned for Avatar: Seven Havens?',
-    answer: 'Book 1 consists of 13 episodes. Paramount+ and Avatar Studios have already announced renewals through Book 4, promising a complete multi-season saga for Pavi and Nisha.'
+    question: 'Where can fans view the complete dossier for all Avatar: Seven Havens characters?',
+    answer: 'Fans can explore complete dossiers for all official Avatar: Seven Havens characters right here on avatarsevenhavenscharacters.com, covering character biographies, relationship maps, and voice credits.'
   }
 ];

@@ -25,10 +25,10 @@ export function RelationshipChart() {
             <span>Interactive Visual Network</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            Character Relationship Map
+            Avatar: Seven Havens Characters Relationship Map
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Click on any character node to inspect alliances, mentor bonds, twin connections, and tactical escorts across the Seven Havens.
+            Click on any character node to inspect alliances, mentor bonds, twin connections, and tactical escorts among all Avatar: Seven Havens characters across the Seven Havens.
           </p>
         </div>
 
@@ -218,7 +218,7 @@ export function RelationshipChart() {
               <div className="space-y-3 mb-6">
                 <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
                   <Info className="h-3.5 w-3.5 text-sky-400" />
-                  <span>Key Alliances & Bonds ({activeEdges.length})</span>
+                  <span>Bonds with Avatar: Seven Havens characters ({activeEdges.length})</span>
                 </h4>
 
                 <div className="space-y-2 max-h-56 overflow-y-auto pr-1">

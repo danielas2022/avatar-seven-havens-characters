@@ -49,7 +49,7 @@ export const CHARACTERS: Character[] = [
     age: '9 years old',
     homeHaven: 'Haven of Ellora (Outer Ruins)',
     quote: 'I never asked to carry the world on my back. I just wanted to help our city survive another dusk.',
-    shortBio: 'A 9-year-old earthbender discovering she is the reincarnation of the Avatar. Unlike past avatars, Pavi faces a fearful world that considers the Avatar a harbinger of the Cataclysm rather than a savior.',
+    shortBio: 'Leading the roster of official Avatar: Seven Havens characters, Pavi is a 9-year-old earthbender discovering she is the reincarnation of the Avatar. Unlike past avatars, Pavi faces a fearful world that considers the Avatar a harbinger of the Cataclysm rather than a savior.',
     fullBio: `Pavi is a quiet, observant nine-year-old earthbender living on the dusty outskirts of the Haven of Ellora. When she first displays bending beyond earth, she is terrified—in the post-Cataclysm world, humanity regards the Avatar not as a revered protector, but as the mythological cause of the apocalypse that destroyed the Four Nations 225 years prior.
 
 Accompanied by her mischievous cat-monkey companion Geet, Pavi's personality mirrors the gentle reluctance of young Aang combined with the steadfast resilience of traditional earthbenders. Her life shifts irrevocably when she discovers that she is not alone: her long-lost twin sister Nisha is also an active Avatar, splintering the sacred cycle for the first time in history.`,
@@ -118,7 +118,7 @@ Accompanied by her mischievous cat-monkey companion Geet, Pavi's personality mir
     age: '9 years old',
     homeHaven: 'Haven of Ellora (Upper Citadel)',
     quote: 'If this broken world thinks the Avatar is a monster, I will show them what an Avatar can fight back against!',
-    shortBio: 'Pavi’s long-lost twin sister, raised inside the fortified defenses of Ellora. Nisha is bold, fiery, and determined, manifesting explosive bending and an instinct for offensive combat.',
+    shortBio: 'Among the most powerful Avatar: Seven Havens characters, Nisha is Pavi’s long-lost twin sister, raised inside the fortified defenses of Ellora. Nisha is bold, fiery, and determined, manifesting explosive multi-bending and fierce combat instincts.',
     fullBio: `Separated from Pavi at infancy following a mysterious spirit raid, Nisha was raised under the strict protection of City Guard Captain Karthik inside the inner citadel of Haven Ellora. Unlike Pavi's gentle demeanor, Nisha possesses a tempestuous, combative spirit reminiscent of young Korra.
 
 When her Avatar powers ignite alongside Pavi's during a catastrophic spirit incursion, the truth of their shared soul is exposed. While Pavi seeks understanding and peaceful restoration, Nisha seeks power to protect their loved ones from the dark entity hunting them across the havens. Accompanied by her rambunctious cat-monkey Ruhi, Nisha's journey is one of channeling unbridled rage into disciplined mastery.`,
@@ -180,7 +180,7 @@ When her Avatar powers ignite alongside Pavi's during a catastrophic spirit incu
     age: '19 years old',
     homeHaven: 'Haven of Ellora (Garrison Heights)',
     quote: 'Orders are easy to follow until the right thing means breaking every rule you swore to uphold.',
-    shortBio: 'A disciplined airbender and platoon leader in Ellora’s defense garrison. Jae abandons his military status to protect the young twin Avatars on their perilous journey across the Seven Havens.',
+    shortBio: 'A central protagonist among Avatar: Seven Havens characters, Jae is a disciplined airbender and platoon leader in Ellora’s defense garrison who abandons his military status to protect the young twin Avatars on their perilous journey across the Seven Havens.',
     fullBio: `Jae is an agile, dutiful airbender who climbed through the ranks of the Ellora Bending Brigade through tactical intellect and calm under pressure. In a post-Cataclysm civilization where airbenders are sparse and primarily deployed as city scouts and glider couriers, Jae commands an elite tactical squad including waterbender Daemin.
 
 When ordered by city magistrates to detain Pavi and Nisha as dangerous "Cataclysm entities," Jae witnesses the purity of the girls' spirits and makes the pivotal decision to defect. Serving as the primary elder brother and military shield for the young girls, Jae balances air nomad philosophy with the harsh realities of survival in the ruins.`,
@@ -241,7 +241,7 @@ When ordered by city magistrates to detain Pavi and Nisha as dangerous "Cataclys
     age: '42 years old',
     homeHaven: 'Haven of Ellora (High Spire)',
     quote: 'I promised to keep her alive in a world that burns everything it doesn’t understand. I intend to keep that promise.',
-    shortBio: 'Veteran Airbender commander and stoic guardian of Nisha. Karthik carries dark secrets regarding the origin of the Twin Avatars and the fall of the old world.',
+    shortBio: 'A veteran commander among Avatar: Seven Havens characters, Karthik is a stoic airbender guardian who raised Nisha and carries dark secrets regarding the origin of the Twin Avatars.',
     fullBio: `Captain Karthik is the commanding general of the City Guard in the Haven of Ellora. A master airbender with scars from decades of skirmishes against aberrant spirit creatures and wasteland raiders, Karthik has kept Nisha’s identity hidden in plain sight inside the garrison.
 
 Karthik knows far more about the Cataclysm of 200 years ago than he reveals to the civilian council. He holds ancient scrolls from the Order of the White Lotus, which collapsed during the crisis. When the twins are exposed, Karthik works from the shadows to mislead city hounds and buy Jae and the girls precious time to reach the Haven of the North.`,
@@ -296,7 +296,7 @@ Karthik knows far more about the Cataclysm of 200 years ago than he reveals to t
     age: '20 years old',
     homeHaven: 'Haven of Ellora (Aqueduct District)',
     quote: 'Water finds a way through solid rock given enough time. We just have to make our own way.',
-    shortBio: 'A skilled waterbender and stalwart member of Jae’s brigade. Daemin provides heavy defensive water shields and tactical support during the twins\' exodus.',
+    shortBio: 'A skilled waterbender among Avatar: Seven Havens characters, Daemin is a stalwart member of Jae’s brigade who provides heavy defensive water shields and tactical support during the exodus.',
     fullBio: `Daemin was raised in the damp sub-levels of Ellora’s Aqueduct District, where scarce water reserves from deep underground aquifers are distributed to the populace. Joining the Bending Brigade to ensure water security for the lower wards, Daemin became Jae’s most trusted battle partner.
 
 In combat, Daemin employs precise, high-pressure water whips and ice flash-freezing to disarm opponents without inflicting lethal injuries. When Jae decides to risk everything to escort Pavi and Nisha, Daemin does not hesitate to follow his captain into exile.`,
@@ -344,7 +344,7 @@ In combat, Daemin employs precise, high-pressure water whips and ice flash-freez
     age: '61 years old',
     homeHaven: 'Haven of Ellora (Central Market)',
     quote: 'Children belong in schools and sunny courtyards, not hunted through poisoned wastes. Take the flatbreads and run.',
-    shortBio: 'Warm-hearted and shrewd street vendor who runs a prominent food stall in Ellora. Agam is an indispensable underground informant and surrogate grandmother.',
+    shortBio: 'A beloved haven elder among Avatar: Seven Havens characters, Agam runs a prominent food stall in Ellora and serves as an indispensable underground informant and surrogate grandmother.',
     fullBio: `Agam has lived in the Haven of Ellora for over six decades, observing the shifting tides of fear and politics from her corner snack shop. To the city authorities, she is merely a talkative old woman selling spiced lentils and roasted flatbread; to the children and underground resistance, she is a vital lifeline.
 
 Agam provided young Pavi with warm meals and sheltered her from harsh winter squalls. When the alarm sounds across Ellora declaring the emergence of the Avatar, Agam risks her livelihood to provide the runaway group with travel rations, disguise cloaks, and safe passage through the merchant cellars.`,
@@ -392,7 +392,7 @@ Agam provided young Pavi with warm meals and sheltered her from harsh winter squ
     age: '26 years old',
     homeHaven: 'Wasteland Nomad (Inter-Haven Routes)',
     quote: 'The maps from the old world lie. The earth moved, the seas boiled, and only the cautious survive between the havens.',
-    shortBio: 'A battle-hardened courier and guide who navigates the uncharted, spirit-infested wilderness separating the Seven Havens.',
+    shortBio: 'A battle-hardened scout among Avatar: Seven Havens characters, Zi navigates the uncharted, spirit-infested wilderness separating the Seven Havens.',
     fullBio: `Zi is one of the rare few brave enough to venture outside the sealed walls of the Seven Havens. Armed with a modified steam-rigged crossbow, directional sand-skiffs, and an uncanny knowledge of mutated spirit paths, Zi connects the isolated human sanctuaries.
 
 When Jae and the twins escape Ellora, they hire Zi to lead them across the Shattered Expanse toward the second haven. Her pragmatic skepticism often clashes with Pavi’s idealism, but Zi’s combat prowess and navigation instincts repeatedly save the group from annihilation.`,
@@ -440,7 +440,7 @@ When Jae and the twins escape Ellora, they hire Zi to lead them across the Shatt
     age: 'Juvenile Creatures',
     homeHaven: 'Wasteland Flora & Ruined Sanctuaries',
     quote: '*Chitter-purr and aerial tail flip*',
-    shortBio: 'Twin feline-simian creatures bonded respectively to Pavi and Nisha, continuing the cherished Avatar tradition of faithful animal companions.',
+    shortBio: 'Twin feline-simian creatures bonded respectively to Pavi and Nisha, these beloved Avatar: Seven Havens characters continue the cherished animal companion tradition.',
     fullBio: `Continuing the iconic lineage of Appa and Momo (ATLA) and Naga and Pabu (TLOK), Geet and Ruhi are agile, inquisitive cat-monkeys indigenous to the overgrown ruins of the post-Cataclysm world. Geet is bonded to Pavi—sporting a lighter fawn coat, gentle demeanor, and an uncanny ability to sniff out subterranean gemstone vibrations.
 
 Ruhi is bonded to Nisha—featuring darker tiger-striped fur, razor-sharp pounces, and a propensity for pilfering guards\' key-rings. Whenever the twin Avatars resonate emotionally, the two cat-monkeys coordinate playful acrobatics and sound alarm calls when spiritual disturbances loom nearby.`,
@@ -487,7 +487,7 @@ Ruhi is bonded to Nisha—featuring darker tiger-striped fur, razor-sharp pounce
     },
     homeHaven: 'The Void Between Havens',
     quote: '*Resonant low-frequency harmonic drone that bends ambient shadows*',
-    shortBio: 'A colossal shadow entity that hunts the Twin Avatars across the wastelands, thought by ancient scholars to be connected to the cataclysmic rupture of the Spirit Portals.',
+    shortBio: 'A colossal shadow entity that hunts the Twin Avatars across the wastelands, standing as the primary supernatural threat facing all Avatar: Seven Havens characters.',
     fullBio: `Known by wasteland tribes simply as "The Shadow of the Ruin," this terrifying entity is a shape-shifting coalesced mass of corrupted spiritual energy. Unlike natural spirits who inhabit sacred groves, this creature feeds on elemental instability and raw human fear.
 
 Throughout Book 1, it pursues Pavi and Nisha with relentless precision. Fan theories and in-universe scholarly fragments hint that it may be a remnant of dark spiritual energy spawned during the catastrophic severing of the physical and spirit worlds 225 years prior.`,
@@ -535,7 +535,7 @@ Throughout Book 1, it pursues Pavi and Nisha with relentless precision. Fan theo
     age: '225 Years Prior',
     homeHaven: 'Southern Water Tribe / Republic City (Historical)',
     quote: 'The Avatar’s duty is to bring balance, even when the world forgets what balance means.',
-    shortBio: 'The Avatar who preceded the Cataclysm by over two centuries. What happened during the final days of Korra\'s era is the foundational mystery that haunts the Seven Havens.',
+    shortBio: 'The legendary predecessor to the new Avatar: Seven Havens characters, Avatar Korra preceded the Cataclysm by over two centuries and appears as a spiritual guide.',
     fullBio: `Set 225 years after the era of *The Legend of Korra*, *Avatar: Seven Havens* constantly grapples with the historical legacy of Korra. In this future, the grand technological advances of Republic City have fallen into legendary myth following the "Great Cataclysm."
 
 Humanity believes that the Avatar failed or actively unleashed the apocalypse that split the earth into seven fortified havens. Because Korra had previously re-opened the Spirit Portals and severed the old past-life connections before forging a new cycle with Raava, scholars wonder: Did Raava fracture during the Cataclysm? And why did the Avatar reincarnate as twins?`,

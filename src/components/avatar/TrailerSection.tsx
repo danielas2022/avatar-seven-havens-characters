@@ -34,10 +34,10 @@ export function TrailerSection() {
             <span>Official Media & Teaser Analysis</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            Avatar: Seven Havens Official Trailer
+            Official Trailer Featuring Avatar: Seven Havens Characters
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Watch the official Paramount+ trailer revealing Pavi, Nisha, and the post-cataclysmic world of the Seven Havens.
+            Watch the official Paramount+ trailer revealing Avatar: Seven Havens characters Pavi, Nisha, and Jae navigating the Seven Havens.
           </p>
         </div>
 

@@ -19,11 +19,11 @@ export function TwinSpotlight() {
             <span>Franchise First &bull; The Split Avatar Cycle</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
-            The Twin Avatars: Pavi & Nisha
+            The Twin Avatar: Seven Havens Characters — Pavi &amp; Nisha
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
             For 10,000 years from Avatar Wan to Avatar Korra, Raava’s light reincarnated into a single vessel.
-            In <em>Avatar: Seven Havens</em>, the Avatar Cycle has fractured across identical twin sisters, creating unprecedented dual avatars.
+            In <em>Avatar: Seven Havens</em>, the Avatar Cycle has fractured across identical twin sisters, creating the most pivotal Avatar: Seven Havens characters yet.
           </p>
 
           {/* Quick toggle tab on mobile */}
@@ -129,7 +129,7 @@ export function TwinSpotlight() {
                   params={{ slug: 'pavi' }}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-amber-500 hover:text-amber-400 group-hover:translate-x-1 transition-all"
                 >
-                  <span>Full Character Dossier</span>
+                  <span>Pavi in Avatar: Seven Havens characters dossier</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
@@ -205,7 +205,7 @@ export function TwinSpotlight() {
                   params={{ slug: 'nisha' }}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-rose-400 hover:text-rose-300 group-hover:translate-x-1 transition-all"
                 >
-                  <span>Full Character Dossier</span>
+                  <span>Nisha in Avatar: Seven Havens characters dossier</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
@@ -220,14 +220,14 @@ export function TwinSpotlight() {
           </div>
           <div className="text-xs sm:text-sm text-muted-foreground leading-relaxed flex-1">
             <strong className="text-foreground">Why Are There Two Avatars?</strong> In the 225 years following Avatar Korra,
-            the severing of the physical and spirit planes fragmented Raava’s reincarnation flow. Pavi and Nisha share the cosmic cycle:
-            when they touch hands or harmonize stances, their combined bending surpasses any single Avatar in living memory.
+            the severing of the physical and spirit planes fragmented Raava’s reincarnation flow across these twin Avatar: Seven Havens characters. Pavi and Nisha share the cosmic cycle:
+            when they touch hands or harmonize stances, their combined bending surpasses any single one of the Avatar: Seven Havens characters in living memory.
           </div>
           <Link
             to="/lore"
             className="shrink-0 text-xs font-semibold text-amber-500 hover:underline flex items-center gap-1"
           >
-            <span>Read Lore Wiki</span>
+            <span>Avatar: Seven Havens characters lore</span>
             <ArrowRight className="h-3 w-3" />
           </Link>
         </div>
