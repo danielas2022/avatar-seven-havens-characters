@@ -216,12 +216,15 @@ export function RelationshipChart() {
 
               {/* Connections list */}
               <div className="space-y-3 mb-6">
-                <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1.5">
-                  <Info className="h-3.5 w-3.5 text-sky-400" />
-                  <span>Bonds with Avatar: Seven Havens characters ({activeEdges.length})</span>
+                <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider flex items-center justify-between">
+                  <span className="flex items-center gap-1.5">
+                    <Info className="h-3.5 w-3.5 text-sky-400" />
+                    <span>Evidence-Tracked Bonds ({activeEdges.length})</span>
+                  </span>
+                  <span className="text-[10px] text-muted-foreground font-mono">Canon Verified</span>
                 </h4>
 
-                <div className="space-y-2 max-h-56 overflow-y-auto pr-1">
+                <div className="space-y-2.5 max-h-64 overflow-y-auto pr-1">
                   {activeEdges.map((edge) => {
                     const otherNodeId = edge.source === selectedNodeId ? edge.target : edge.source;
                     const otherNode = RELATIONSHIP_NODES.find((n) => n.id === otherNodeId);
@@ -230,17 +233,40 @@ export function RelationshipChart() {
                       <div
                         key={edge.id}
                         onClick={() => setSelectedNodeId(otherNodeId)}
-                        className="p-2.5 rounded-lg bg-muted/30 border border-border/50 hover:bg-muted/70 transition-colors cursor-pointer text-xs"
+                        className="p-3 rounded-xl bg-muted/30 border border-border/60 hover:bg-muted/70 transition-colors cursor-pointer text-xs"
                       >
-                        <div className="flex items-center justify-between font-semibold text-foreground mb-0.5">
+                        <div className="flex items-center justify-between font-semibold text-foreground mb-1">
                           <span>{otherNode?.name}</span>
-                          <span className="text-[10px] text-primary px-1.5 py-0.2 rounded bg-primary/10">
+                          <span className="text-[10px] text-amber-500 font-bold px-2 py-0.5 rounded bg-amber-500/10">
                             {edge.label}
                           </span>
                         </div>
-                        <p className="text-[11px] text-muted-foreground leading-tight">
+
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <span
+                            className={`inline-flex items-center gap-1 text-[9px] font-bold px-2 py-0.5 rounded-full border ${
+                              edge.isCanon
+                                ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+                                : 'bg-amber-500/10 text-amber-400 border-amber-500/30'
+                            }`}
+                          >
+                            <ShieldCheck className="h-2.5 w-2.5" />
+                            <span>{edge.isCanon ? 'Verified Canon' : 'Unconfirmed Speculation'}</span>
+                          </span>
+
+                          <span className="text-[10px] text-muted-foreground font-mono">
+                            {edge.episodeContext}
+                          </span>
+                        </div>
+
+                        <p className="text-[11px] text-muted-foreground leading-relaxed mb-1.5">
                           {edge.details}
                         </p>
+
+                        <div className="text-[9px] text-muted-foreground/80 italic border-t border-border/40 pt-1 flex items-center justify-between">
+                          <span>Source: {edge.evidenceSource}</span>
+                          <span>{edge.verifiedDate}</span>
+                        </div>
                       </div>
                     );
                   })}

@@ -38,6 +38,11 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
+                <Link to="/pavi-vs-nisha" className="hover:text-foreground transition-colors text-amber-500 font-medium">
+                  Pavi vs Nisha Comparison Tool
+                </Link>
+              </li>
+              <li>
                 <a href="/#twin-spotlight" className="hover:text-foreground transition-colors">
                   Twin Avatar: Seven Havens characters
                 </a>
@@ -112,8 +117,10 @@ export function SiteFooter() {
 
         {/* Legal Disclaimer */}
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <p className="text-[11px] text-muted-foreground/80">
-            &copy; {new Date().getFullYear()} avatarsevenhavenscharacters.com. All Avatar: The Last Airbender & The Legend of Korra elements are trademarks of Nickelodeon, Avatar Studios & Paramount Global. This independent wiki is created for commentary, research, and fan reference under fair use.
+          <p className="text-[11px] text-muted-foreground/80 max-w-4xl leading-normal">
+            &copy; {new Date().getFullYear()} avatarsevenhavenscharacters.com. An independent non-commercial fan encyclopedia and research portal.
+            Avatar: Seven Havens, Avatar: The Last Airbender, The Legend of Korra, and all related characters, logos, and promotional imagery are trademarks and intellectual property of Paramount Global, Nickelodeon Animation Studio, and Avatar Studios.
+            All materials are utilized for non-commercial commentary, critical review, and educational reference under 17 U.S. Code § 107 (Fair Use). Not endorsed by or affiliated with Paramount Global.
           </p>
           <div className="flex items-center gap-1 text-[11px] shrink-0">
             <span>Built for the Avatar fandom</span>

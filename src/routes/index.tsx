@@ -31,7 +31,7 @@ function HomePage() {
         <EpisodeGuide />
         <FAQSection />
 
-        {/* SEO Canonical Keywords Index */}
+        {/* SEO Canonical Keywords Index & Topic Directory */}
         <section className="py-8 bg-muted/20 border-t border-border/40 text-xs text-muted-foreground">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <h3 className="font-semibold text-foreground text-xs uppercase tracking-wider mb-2">
@@ -40,19 +40,22 @@ function HomePage() {
             <p className="text-[11px] leading-relaxed mb-3">
               Explore every entry in our database for Avatar: Seven Havens characters. Covering twin Avatar: Seven Havens characters Pavi and Nisha, airbending Avatar: Seven Havens characters Jae and Karthik, waterbending Avatar: Seven Havens characters Daemin, and non-bending Avatar: Seven Havens characters Agam and Zi. This community directory indexes voice cast credits, episode timelines, concept art, and lore for all Avatar: Seven Havens characters.
             </p>
-            <div className="flex flex-wrap gap-2 text-[10px]">
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Pavi (Earth Avatar)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Nisha (Twin Avatar)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Jae (Airbender Leader)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Aang (ATLA Legend)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Korra (TLOK Legend)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Fire Lord Zuko (Classic)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Toph Beifong (Classic)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Karthik (Guard Commander)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Daemin (Waterbender)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Agam (Haven Caretaker)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Zi (Wasteland Scout)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Geet &amp; Ruhi (Creatures)</span>
+            <p className="text-[11px] leading-relaxed mb-3">
+              Understanding the generational journey of Avatar: Seven Havens characters requires connecting the post-Cataclysm setting with past franchise legends. As new Avatar: Seven Havens characters awaken across the ruins, fans can compare Avatar: Seven Havens characters with historical masters like Aang, Korra, Zuko, and Toph. Our verified dossiers ensure all Avatar: Seven Havens characters are documented with authentic Paramount+ press sources. Whether analyzing elemental arts of Avatar: Seven Havens characters or following the journey of Avatar: Seven Havens characters in Book 1, this encyclopedia tracks every update for Avatar: Seven Havens characters.
+            </p>
+            <div className="flex flex-wrap gap-2 text-[10px] mb-3">
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Pavi (Earth Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Nisha (Twin Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Jae (Airbender Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Aang (Predecessor to Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Korra (Predecessor to Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Fire Lord Zuko (Inspiration for Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Toph Beifong (Lineage for Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Karthik (Guard Leader in Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Daemin (Waterbender in Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Agam (Haven Elder in Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Zi (Wasteland Scout in Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Geet &amp; Ruhi (Creature Companions for Avatar: Seven Havens characters)</span>
             </div>
           </div>
         </section>

@@ -213,22 +213,29 @@ export function TwinSpotlight() {
           )}
         </div>
 
-        {/* The Mystery Explained Box */}
-        <div className="mt-12 max-w-4xl mx-auto rounded-2xl border border-border/80 bg-muted/30 p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-sm">
-          <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 flex items-center justify-center shrink-0 shadow-md">
-            <HeartHandshake className="h-5 w-5 text-white" />
-          </div>
-          <div className="text-xs sm:text-sm text-muted-foreground leading-relaxed flex-1">
-            <strong className="text-foreground">Why Are There Two Avatars?</strong> In the 225 years following Avatar Korra,
-            the severing of the physical and spirit planes fragmented Raava’s reincarnation flow across these twin Avatar: Seven Havens characters. Pavi and Nisha share the cosmic cycle:
-            when they touch hands or harmonize stances, their combined bending surpasses any single one of the Avatar: Seven Havens characters in living memory.
+        {/* The Mystery Explained & Comparison Tool Entry */}
+        <div className="mt-12 max-w-4xl mx-auto rounded-2xl border border-amber-500/40 bg-card p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-lg">
+          <div className="flex items-start gap-4 flex-1">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 flex items-center justify-center shrink-0 shadow-md">
+              <HeartHandshake className="h-5 w-5 text-stone-950 font-bold" />
+            </div>
+            <div className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              <div className="flex items-center gap-2 mb-1">
+                <strong className="text-foreground font-serif">Why Are There Two Avatars?</strong>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/30">
+                  Unrevealed Series Mystery
+                </span>
+              </div>
+              Paramount+ has officially verified that 9-year-old twins Pavi and Nisha both manifest the sacred Avatar mantle 225 years after the Cataclysm.
+              However, whether Raava fractured into two distinct spirit halves or bonded simultaneously across both twins remains an unconfirmed mystery pending the premiere of Avatar: Seven Havens characters on Paramount+.
+            </div>
           </div>
           <Link
-            to="/lore"
-            className="shrink-0 text-xs font-semibold text-amber-500 hover:underline flex items-center gap-1"
+            to="/pavi-vs-nisha"
+            className="shrink-0 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 hover:from-amber-600 hover:to-rose-600 text-stone-950 font-bold text-xs flex items-center gap-2 transition-all shadow-md"
           >
-            <span>Avatar: Seven Havens characters lore</span>
-            <ArrowRight className="h-3 w-3" />
+            <span>Launch Comparison Matrix</span>
+            <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
       </div>
