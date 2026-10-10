@@ -17,7 +17,7 @@ export function SiteFooter() {
                 />
               </div>
               <span className="font-serif font-bold text-sm text-foreground">
-                Avatar: Seven Havens Characters
+                Seven Havens
               </span>
             </div>
             <p className="max-w-md leading-relaxed text-xs">
