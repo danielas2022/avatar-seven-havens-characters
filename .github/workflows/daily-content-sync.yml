@@ -2,9 +2,9 @@ name: Daily Episode & Content Sync
 
 on:
   schedule:
-    # Runs daily at 08:00 UTC (4:00 AM EDT / 1:00 AM PDT)
-    # Aligns with overnight Paramount+ streaming episode drops
-    - cron: '0 8 * * *'
+    # Runs daily at 13:00 UTC (9:00 AM ET / 6:00 AM PT)
+    # Aligns with morning sync before US daytime search traffic peak
+    - cron: '0 13 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub Actions tab
 
 jobs:
