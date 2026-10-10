@@ -143,8 +143,11 @@ export function CharacterGrid() {
                   <img
                     src={char.imageUrl}
                     alt={`${char.name} - ${char.alias}`}
-                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    width={400}
+                    height={300}
                     loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Atmospheric overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />

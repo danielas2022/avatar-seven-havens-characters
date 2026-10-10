@@ -7,11 +7,11 @@ import { Tv } from 'lucide-react';
 
 export const Route = createFileRoute('/episodes')({
   head: () => {
-    const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
+    const siteUrl = envConfigs.app_url || 'https://avatarsevenhavenscharacters.com';
     const pageUrl = `${siteUrl}/episodes`;
-    const title = 'Avatar Franchise Episode Guide & Seven Havens Roadmap | ATLA, Korra & Book 1';
+    const title = 'Avatar: Seven Havens Episode Guide & Franchise Archive';
     const description =
-      'Complete episodic archive across the classic 61 chapters of Avatar: The Last Airbender, 52 episodes of The Legend of Korra, and the official Avatar Studios production roadmap for Avatar: Seven Havens.';
+      'Episode guide for Avatar: Seven Havens (Paramount+ 2026), plus complete episode archives for Avatar: The Last Airbender and The Legend of Korra.';
 
     return {
       meta: [

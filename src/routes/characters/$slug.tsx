@@ -38,10 +38,10 @@ export const Route = createFileRoute('/characters/$slug')({
     const char = loaderData?.character;
     if (!char) return {};
 
-    const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
+    const siteUrl = envConfigs.app_url || 'https://avatarsevenhavenscharacters.com';
     const pageUrl = `${siteUrl}/characters/${char.id}`;
-    const title = `${char.name} (${char.alias}) | Avatar: Seven Havens Character Profile & Canon Dossier`;
-    const description = `Verified canon dossier for ${char.name} in Avatar: Seven Havens (Paramount+ 2026). Sourced from official Avatar Studios announcements, confirmed abilities, voice cast (${char.voiceActor.name}), and evidence tracking.`;
+    const title = `Avatar Seven Havens: ${char.name} Guide & Cast`;
+    const description = `Guide to ${char.name} in Avatar: Seven Havens (2026). Confirmed bending powers, voice actor ${char.voiceActor.name}, episode appearances, and official canon lore.`;
 
     const jsonLd = {
       '@context': 'https://schema.org',
@@ -156,6 +156,8 @@ function CharacterDetailPage() {
                   <img
                     src={character.imageUrl}
                     alt={`${character.name} - ${character.alias} in Avatar: Seven Havens`}
+                    width={400}
+                    height={533}
                     className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -197,6 +199,9 @@ function CharacterDetailPage() {
                 </div>
 
                 <div className="mb-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber-500 block mb-1">
+                    Avatar Seven Havens &bull; {character.name} Canon Dossier
+                  </span>
                   <div className="flex items-center gap-2 mb-1">
                     <h1 className="font-serif text-3xl sm:text-5xl font-bold text-foreground">
                       {character.name}
@@ -571,6 +576,10 @@ function CharacterDetailPage() {
                               <img
                                 src={rel.otherCharacter.imageUrl}
                                 alt={targetName}
+                                width={24}
+                                height={24}
+                                loading="lazy"
+                                decoding="async"
                                 className="h-6 w-6 rounded-full object-cover object-top border border-border"
                               />
                             )}

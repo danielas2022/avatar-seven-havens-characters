@@ -183,8 +183,11 @@ export function GallerySection() {
                   <img
                     src={item.imageUrl}
                     alt={item.title}
-                    className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    width={400}
+                    height={300}
                     loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
@@ -253,6 +256,10 @@ export function GallerySection() {
                 <img
                   src={selectedItem.imageUrl}
                   alt={selectedItem.title}
+                  width={1200}
+                  height={750}
+                  loading="lazy"
+                  decoding="async"
                   className="max-h-full max-w-full object-contain"
                 />
                 <div className="absolute top-4 left-4 z-10">

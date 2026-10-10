@@ -13,6 +13,10 @@ export function SiteFooter() {
                 <img
                   src="/imgs/avatar-brand-logo.png"
                   alt="Avatar Pavi"
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -21,8 +25,8 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="max-w-md leading-relaxed text-xs">
-              The premier community guide and wiki dedicated to all official Avatar: Seven Havens characters.
-              Comprehensive profiles, voice actors, relationships, and episodes for Avatar: Seven Havens characters in the post-cataclysmic world.
+              The premier community encyclopedia and wiki dedicated to official Avatar: Seven Havens characters.
+              Comprehensive profiles, voice actors, relationships, and episode guides across the post-cataclysmic world.
             </p>
           </div>
 
@@ -44,7 +48,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <a href="/#twin-spotlight" className="hover:text-foreground transition-colors">
-                  Twin Avatar: Seven Havens characters
+                  Twin Avatars Spotlight
                 </a>
               </li>
               <li>
@@ -54,7 +58,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link to="/relationship-chart" className="hover:text-foreground transition-colors">
-                  Relationship Map of Avatar: Seven Havens characters
+                  Interactive Relationship Map
                 </Link>
               </li>
               <li>
@@ -64,7 +68,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link to="/episodes" className="hover:text-foreground transition-colors">
-                  Episodes with Avatar: Seven Havens characters
+                  Episodes &amp; Canon Timeline
                 </Link>
               </li>
             </ul>

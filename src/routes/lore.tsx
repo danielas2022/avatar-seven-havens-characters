@@ -7,11 +7,11 @@ import { BookOpen } from 'lucide-react';
 
 export const Route = createFileRoute('/lore')({
   head: () => {
-    const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
+    const siteUrl = envConfigs.app_url || 'https://avatarsevenhavenscharacters.com';
     const pageUrl = `${siteUrl}/lore`;
-    const title = 'Avatar: Seven Havens World Lore & Encyclopedia | The Cataclysm & 7 Havens';
+    const title = 'Avatar: Seven Havens World Lore & Cataclysm Guide';
     const description =
-      'Complete lore guide to Avatar: Seven Havens (Paramount+ 2026). Explore the history of the Cataclysm 225 years after Legend of Korra, why humanity fears the Avatar as a destroyer, the 7 fortified sanctuaries, and twin Avatar cycle mechanics.';
+      'World lore guide for Avatar: Seven Havens (Paramount+ 2026). Discover the Cataclysm 225 years after Korra, the 7 fortified havens, and twin Avatar mechanics.';
 
     return {
       meta: [

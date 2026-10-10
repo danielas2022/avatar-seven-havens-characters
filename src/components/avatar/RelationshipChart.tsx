@@ -321,9 +321,12 @@ export function RelationshipChart() {
                         >
                           <img
                             src={node.imageUrl}
-                            alt={`${node.name} - Avatar: Seven Havens characters`}
-                            className="h-full w-full object-cover object-top rounded-full bg-muted/60"
+                            alt={node.name}
+                            width={72}
+                            height={72}
                             loading="lazy"
+                            decoding="async"
+                            className="h-full w-full object-cover object-top rounded-full bg-muted/60"
                           />
                         </div>
 
@@ -382,6 +385,10 @@ export function RelationshipChart() {
                   <img
                     src={selectedNode.imageUrl}
                     alt={selectedNode.name}
+                    width={64}
+                    height={64}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover object-top"
                   />
                   <div
@@ -446,6 +453,10 @@ export function RelationshipChart() {
                               <img
                                 src={otherNode?.imageUrl}
                                 alt={otherNode?.name}
+                                width={20}
+                                height={20}
+                                loading="lazy"
+                                decoding="async"
                                 className="h-full w-full object-cover object-top"
                               />
                             </div>

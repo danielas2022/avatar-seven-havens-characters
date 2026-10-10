@@ -8,11 +8,11 @@ import { Users, ArrowLeft } from 'lucide-react';
 
 export const Route = createFileRoute('/characters/')({
   head: () => {
-    const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
+    const siteUrl = envConfigs.app_url || 'https://avatarsevenhavenscharacters.com';
     const pageUrl = `${siteUrl}/characters`;
-    const title = 'Avatar: Seven Havens Characters Directory | Full Roster & Bios';
+    const title = 'Avatar: Seven Havens Characters & Full Cast Roster';
     const description =
-      'Complete roster of characters in Avatar: Seven Havens (Paramount+ 2026). Explore bios, bending arts, factions, and voice actors for Pavi, Nisha, Jae, Karthik, Daemin, and more.';
+      'Complete character roster for Avatar: Seven Havens (Paramount+ 2026). Explore bios, bending arts, factions, and voice cast for Pavi, Nisha, and Jae.';
 
     return {
       meta: [

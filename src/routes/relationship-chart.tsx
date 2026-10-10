@@ -7,11 +7,11 @@ import { GitFork, ArrowLeft } from 'lucide-react';
 
 export const Route = createFileRoute('/relationship-chart')({
   head: () => {
-    const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
+    const siteUrl = envConfigs.app_url || 'https://avatarsevenhavenscharacters.com';
     const pageUrl = `${siteUrl}/relationship-chart`;
-    const title = 'Avatar: Seven Havens Character Relationship Map | Interactive Chart';
+    const title = 'Avatar: Seven Havens Character Relationship Map';
     const description =
-      'Interactive character relationship map for Avatar: Seven Havens. Visual graph connecting twin Avatars Pavi and Nisha, Jae, Captain Karthik, Daemin, Agam, Zi, animal companions Geet & Ruhi, and enemy factions.';
+      'Interactive relationship map for Avatar: Seven Havens. Explore connections between twin Avatars Pavi and Nisha, Jae, allies, guardians, and enemy factions.';
 
     return {
       meta: [

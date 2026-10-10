@@ -68,6 +68,10 @@ export function TwinSpotlight() {
                 <img
                   src="/imgs/canon/trio-key-scene.png"
                   alt="Pavi - The Reluctant Avatar"
+                  width={640}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
@@ -129,7 +133,7 @@ export function TwinSpotlight() {
                   params={{ slug: 'pavi' }}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-amber-500 hover:text-amber-400 group-hover:translate-x-1 transition-all"
                 >
-                  <span>Pavi in Avatar: Seven Havens characters dossier</span>
+                  <span>View Full Pavi Canon Dossier</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
@@ -144,6 +148,10 @@ export function TwinSpotlight() {
                 <img
                   src={nisha.imageUrl}
                   alt="Nisha - The Fiery Twin Avatar"
+                  width={640}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
@@ -205,7 +213,7 @@ export function TwinSpotlight() {
                   params={{ slug: 'nisha' }}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-rose-400 hover:text-rose-300 group-hover:translate-x-1 transition-all"
                 >
-                  <span>Nisha in Avatar: Seven Havens characters dossier</span>
+                  <span>View Full Nisha Canon Dossier</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
@@ -227,7 +235,7 @@ export function TwinSpotlight() {
                 </span>
               </div>
               Paramount+ has officially verified that 9-year-old twins Pavi and Nisha both manifest the sacred Avatar mantle 225 years after the Cataclysm.
-              However, whether Raava fractured into two distinct spirit halves or bonded simultaneously across both twins remains an unconfirmed mystery pending the premiere of Avatar: Seven Havens characters on Paramount+.
+              However, whether Raava fractured into two distinct spirit halves or bonded simultaneously across both twins remains an unconfirmed mystery pending upcoming episodes on Paramount+.
             </div>
           </div>
           <Link

@@ -37,25 +37,25 @@ function HomePage() {
             <h3 className="font-semibold text-foreground text-xs uppercase tracking-wider mb-2">
               Official Avatar: Seven Havens Characters Index &amp; Topic Directory
             </h3>
-            <p className="text-[11px] leading-relaxed mb-3">
-              Explore every entry in our database for Avatar: Seven Havens characters. Covering twin Avatar: Seven Havens characters Pavi and Nisha, airbending Avatar: Seven Havens characters Jae and Karthik, waterbending Avatar: Seven Havens characters Daemin, and non-bending Avatar: Seven Havens characters Agam and Zi. This community directory indexes voice cast credits, episode timelines, concept art, and lore for all Avatar: Seven Havens characters.
+            <p className="text-xs leading-relaxed mb-3">
+              Explore the official character encyclopedia for <em>Avatar: Seven Havens</em> (Paramount+ 2026). Our database tracks twin Avatars Pavi and Nisha, airbending guardian Jae, Captain Karthik, Haven elder Agam, and wasteland scout Zi. Each profile features verified voice actors, bending abilities, episode appearances, and official Avatar Studios production citations.
             </p>
-            <p className="text-[11px] leading-relaxed mb-3">
-              Understanding the generational journey of Avatar: Seven Havens characters requires connecting the post-Cataclysm setting with past franchise legends. As new Avatar: Seven Havens characters awaken across the ruins, fans can compare Avatar: Seven Havens characters with historical masters like Aang, Korra, Zuko, and Toph. Our verified dossiers ensure all Avatar: Seven Havens characters are documented with authentic Paramount+ press sources. Whether analyzing elemental arts of Avatar: Seven Havens characters or following the journey of Avatar: Seven Havens characters in Book 1, this encyclopedia tracks every update for Avatar: Seven Havens characters.
+            <p className="text-xs leading-relaxed mb-3">
+              Set 225 years after <em>The Legend of Korra</em>, the Seven Havens narrative bridges a cataclysmic era with the franchise&apos;s rich heritage. Fans can examine how new characters connect with predecessors like Aang, Korra, Zuko, and Toph Beifong through our interactive relationship chart and canonical timeline.
             </p>
             <div className="flex flex-wrap gap-2 text-[10px] mb-3">
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Pavi (Earth Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Nisha (Twin Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Jae (Airbender Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Aang (Predecessor to Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Korra (Predecessor to Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Fire Lord Zuko (Inspiration for Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Toph Beifong (Lineage for Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Karthik (Guard Leader in Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Daemin (Waterbender in Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Agam (Haven Elder in Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Zi (Wasteland Scout in Avatar: Seven Havens characters)</span>
-              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Geet &amp; Ruhi (Creature Companions for Avatar: Seven Havens characters)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Pavi (Earth Avatar)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Nisha (Twin Avatar)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Jae (Airbender Guardian)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Aang (Predecessor)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Korra (Predecessor)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Fire Lord Zuko (Historical)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Toph Beifong (Lineage)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Captain Karthik (Guard Leader)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Daemin (Waterbender)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Agam (Haven Elder)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Zi (Wasteland Scout)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Geet &amp; Ruhi (Creature Companions)</span>
             </div>
           </div>
         </section>
@@ -67,10 +67,11 @@ function HomePage() {
 
 export const Route = createFileRoute('/')({
   head: () => {
-    const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
-    const title = 'Avatar: Seven Havens Characters Guide & Wiki | Full Cast, Pavi & Nisha';
+    const siteUrl = envConfigs.app_url || 'https://avatarsevenhavenscharacters.com';
+    const canonicalUrl = `${siteUrl}/`;
+    const title = 'Avatar: Seven Havens Characters, Cast & Lore Guide';
     const description =
-      'Complete guide to Avatar: Seven Havens characters (Paramount+ 2026). Explore profiles for twin Avatars Pavi and Nisha, Jae, full voice cast, relationship chart, episode guide, and lore 225 years after Korra.';
+      'Explore Avatar: Seven Havens characters (Paramount+ 2026), twin Avatars Pavi and Nisha, Jae, voice cast, relationship chart, episode guides, and lore.';
 
     // Schema.org Structured Data
     const structuredData = [
@@ -79,7 +80,7 @@ export const Route = createFileRoute('/')({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'Avatar: Seven Havens Characters Wiki',
-        url: siteUrl,
+        url: canonicalUrl,
         description: description,
         potentialAction: {
           '@type': 'SearchAction',
@@ -154,7 +155,7 @@ export const Route = createFileRoute('/')({
         { property: 'og:title', content: title },
         { property: 'og:description', content: description },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: siteUrl },
+        { property: 'og:url', content: canonicalUrl },
         { property: 'og:image', content: `${siteUrl}/logo.png` },
         { property: 'og:site_name', content: 'Avatar Seven Havens Characters' },
         // Twitter
@@ -164,7 +165,7 @@ export const Route = createFileRoute('/')({
         { name: 'twitter:image', content: `${siteUrl}/logo.png` },
       ],
       links: [
-        { rel: 'canonical', href: siteUrl },
+        { rel: 'canonical', href: canonicalUrl },
       ],
       scripts: [
         {

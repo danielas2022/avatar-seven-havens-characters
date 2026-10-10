@@ -23,10 +23,11 @@ import {
 
 export const Route = createFileRoute('/pavi-vs-nisha')({
   head: () => {
-    const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
+    const siteUrl = envConfigs.app_url || 'https://avatarsevenhavenscharacters.com';
     const pageUrl = `${siteUrl}/pavi-vs-nisha`;
-    const title = 'Pavi vs Nisha Comparison Matrix | Avatar: Seven Havens Characters Canon Tool';
-    const description = 'Comprehensive side-by-side comparison of Twin Avatars Pavi and Nisha in Avatar: Seven Havens. Verified canon abilities, voice actors, ages, animal companions, and official evidence vs unconfirmed fan theories.';
+    const title = 'Pavi vs Nisha: Avatar Seven Havens Twin Avatars';
+    const description =
+      'Side-by-side comparison of Twin Avatars Pavi and Nisha in Avatar: Seven Havens (2026). Verified canon abilities, voice actors, animal companions, and lore.';
 
     const jsonLd = {
       '@context': 'https://schema.org',
@@ -252,7 +253,11 @@ function PaviVsNishaPage() {
                   <div className="h-20 w-20 rounded-2xl overflow-hidden border-2 border-amber-500/40 shrink-0 bg-muted">
                     <img
                       src={pavi?.imageUrl || '/imgs/canon/pavi-canon-smile-face.png'}
-                      alt="Pavi - Earth Avatar in Avatar: Seven Havens characters"
+                      alt="Pavi - Earth Avatar"
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover object-top"
                     />
                   </div>
@@ -271,7 +276,7 @@ function PaviVsNishaPage() {
 
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   Pavi embodies patience, earthen grounding, and quiet empathy. Raised in poverty outside the city walls,
-                  she prioritizes survival and protective harmony over combative glory among Avatar: Seven Havens characters.
+                  she prioritizes survival and protective harmony over combative glory.
                 </p>
               </div>
 
@@ -306,7 +311,11 @@ function PaviVsNishaPage() {
                   <div className="h-20 w-20 rounded-2xl overflow-hidden border-2 border-rose-500/40 shrink-0 bg-muted">
                     <img
                       src={nisha?.imageUrl || '/imgs/characters/nisha.jpg'}
-                      alt="Nisha - Twin Avatar in Avatar: Seven Havens characters"
+                      alt="Nisha - Twin Avatar"
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover object-top"
                     />
                   </div>

@@ -7,11 +7,11 @@ import { Film, ArrowLeft } from 'lucide-react';
 
 export const Route = createFileRoute('/voice-cast')({
   head: () => {
-    const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
+    const siteUrl = envConfigs.app_url || 'https://avatarsevenhavenscharacters.com';
     const pageUrl = `${siteUrl}/voice-cast`;
-    const title = 'Avatar: Seven Havens Voice Cast & Actors | Full Cast List';
+    const title = 'Avatar: Seven Havens Voice Cast & Actors | Full Cast';
     const description =
-      'Complete voice cast directory for Avatar: Seven Havens (Paramount+ 2026). Explore voice actors for Pavi (Saheli Khan), Nisha (Aishu Devan), Jae (Major Curda), Dee Bradley Baker, Darren Barnet, and show creators.';
+      'Full voice cast directory for Avatar: Seven Havens (Paramount+ 2026). Voice actors for Pavi (Saheli Khan), Nisha (Aishu Devan), Jae (Major Curda), and cast.';
 
     return {
       meta: [

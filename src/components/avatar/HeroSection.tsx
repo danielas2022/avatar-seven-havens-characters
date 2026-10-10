@@ -166,6 +166,9 @@ export function HeroSection() {
               <img
                 src="/imgs/canon/avatar-seven-havens-logo.png"
                 alt="Avatar: Seven Havens Official Series Logo"
+                width={320}
+                height={80}
+                decoding="async"
                 className="h-12 sm:h-16 lg:h-20 w-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.6)]"
               />
             </div>
@@ -180,7 +183,7 @@ export function HeroSection() {
 
             {/* Anime Synopsis */}
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6 max-w-xl">
-              The definitive wiki for all official <strong className="text-foreground">Avatar: Seven Havens characters</strong>. 225 years after <em>The Legend of Korra</em>, explore twin Avatars <strong className="text-amber-400 font-semibold">Pavi</strong> (Earth) &amp; <strong className="text-rose-400 font-semibold">Nisha</strong>, airbender guard <strong className="text-sky-400 font-semibold">Jae</strong>, voice cast, and detailed backstories for every one of the Avatar: Seven Havens characters.
+              The definitive wiki for all official <strong className="text-foreground">Avatar: Seven Havens characters</strong>. Set 225 years after <em>The Legend of Korra</em>, explore twin Avatars <strong className="text-amber-400 font-semibold">Pavi</strong> (Earth) &amp; <strong className="text-rose-400 font-semibold">Nisha</strong>, airbender guardian <strong className="text-sky-400 font-semibold">Jae</strong>, full voice cast, and verified lore across the Seven Havens.
             </p>
 
             {/* Action CTA Buttons */}
@@ -190,7 +193,7 @@ export function HeroSection() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white shadow-lg shadow-orange-600/25 transition-all transform hover:-translate-y-0.5"
               >
                 <Users className="h-4 w-4" />
-                <span>Explore Avatar: Seven Havens characters</span>
+                <span>Explore Full Character Roster</span>
               </a>
 
               <button
@@ -270,6 +273,9 @@ export function HeroSection() {
                     <img
                       src={currentTrailer.poster}
                       alt={currentTrailer.title}
+                      width={640}
+                      height={360}
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover/player:scale-105 opacity-90"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-black/30" />
@@ -332,7 +338,7 @@ export function HeroSection() {
             <div>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-500 mb-1">
                 <Sparkles className="h-3.5 w-3.5" />
-                <span>CORE ANIME CAST &bull; 7 KEY AVATAR: SEVEN HAVENS CHARACTERS</span>
+                <span>CORE ANIME CAST &bull; 7 KEY PROFILES</span>
               </div>
               <h2 className="text-lg sm:text-xl font-bold text-foreground">
                 Official Avatar: Seven Havens Characters Roster
@@ -342,7 +348,7 @@ export function HeroSection() {
               href="#characters"
               className="inline-flex items-center gap-1 text-xs font-semibold text-muted-foreground hover:text-amber-400 transition-colors"
             >
-              <span>Explore All 10 Avatar: Seven Havens characters</span>
+              <span>Explore All 13 Characters</span>
               <ChevronRight className="h-3.5 w-3.5" />
             </a>
           </div>
@@ -365,6 +371,10 @@ export function HeroSection() {
                     <img
                       src={char.imageUrl}
                       alt={char.name}
+                      width={112}
+                      height={112}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>

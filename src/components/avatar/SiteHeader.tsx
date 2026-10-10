@@ -27,6 +27,9 @@ export function SiteHeader() {
             <img
               src="/imgs/avatar-brand-logo.png"
               alt="Avatar Pavi"
+              width={40}
+              height={40}
+              decoding="async"
               className="h-full w-full object-cover"
             />
           </div>

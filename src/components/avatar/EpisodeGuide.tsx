@@ -144,6 +144,10 @@ export function EpisodeGuide() {
                     <img
                       src={ep.thumbnailUrl}
                       alt={`${ep.title} animation still`}
+                      width={640}
+                      height={360}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20" />
@@ -234,6 +238,10 @@ export function EpisodeGuide() {
                               <img
                                 src={character.imageUrl}
                                 alt={character.name}
+                                width={14}
+                                height={14}
+                                loading="lazy"
+                                decoding="async"
                                 className="h-3.5 w-3.5 rounded-full object-cover object-top shrink-0 border border-border/60"
                               />
                               <span>{character.name}</span>

@@ -80,6 +80,8 @@ function BlogPostPage() {
                       alt={post.authorName || ''}
                       width={20}
                       height={20}
+                      loading="lazy"
+                      decoding="async"
                       className="size-5 rounded-full object-cover"
                     />
                   )}
@@ -93,6 +95,10 @@ function BlogPostPage() {
             <img
               src={post.image}
               alt={post.title}
+              width={1200}
+              height={675}
+              loading="lazy"
+              decoding="async"
               className="mb-8 w-full rounded-2xl border border-border object-cover"
             />
           )}

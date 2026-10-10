@@ -27,6 +27,33 @@ function ensureCloudflareEnv(): Promise<void> {
 // getLocale() resolves per-request (AsyncLocalStorage) during SSR.
 export default {
   async fetch(req: Request): Promise<Response> {
+    const url = new URL(req.url);
+    const forwardedProto = req.headers.get('x-forwarded-proto');
+    const cfVisitor = req.headers.get('cf-visitor');
+    const isHttp =
+      url.protocol === 'http:' ||
+      forwardedProto === 'http' ||
+      (cfVisitor ? cfVisitor.includes('"scheme":"http"') : false);
+    const isWww = url.hostname.startsWith('www.');
+    const isLocalhost =
+      url.hostname === 'localhost' ||
+      url.hostname === '127.0.0.1' ||
+      url.hostname.endsWith('.localhost');
+
+    if (!isLocalhost && (isHttp || isWww)) {
+      url.protocol = 'https:';
+      if (isWww) {
+        url.hostname = url.hostname.replace(/^www\./, '');
+      }
+      return new Response(null, {
+        status: 301,
+        headers: {
+          Location: url.toString(),
+          'Cache-Control': 'public, max-age=31536000',
+        },
+      });
+    }
+
     await ensureCloudflareEnv();
     return paraglideMiddleware(req, () => handler.fetch(req));
   },

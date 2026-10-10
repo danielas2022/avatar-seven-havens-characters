@@ -79,6 +79,10 @@ export function VoiceCastTable() {
                       <img
                         src={CHARACTERS.find((c) => c.id === member.characterId)!.imageUrl}
                         alt={member.character}
+                        width={48}
+                        height={48}
+                        loading="lazy"
+                        decoding="async"
                         className="h-12 w-12 rounded-xl object-cover object-top border border-border/80 shadow-sm shrink-0"
                       />
                     ) : (
@@ -91,7 +95,7 @@ export function VoiceCastTable() {
                         {member.name}
                       </h3>
                       <p className="text-xs font-semibold text-emerald-400">
-                        as {member.character} (Avatar: Seven Havens characters roster)
+                        as {member.character}
                       </p>
                     </div>
                   </div>
