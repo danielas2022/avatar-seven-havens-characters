@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from '@tanstack/react-router';
-import { Menu, X, Sparkles, Compass, Users, GitFork, BookOpen, Film, Tv, HelpCircle } from 'lucide-react';
+import { Menu, X, Sparkles, Compass, Users, GitFork, BookOpen, Film, Tv, HelpCircle, Layers } from 'lucide-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 
 export function SiteHeader() {
@@ -9,6 +9,7 @@ export function SiteHeader() {
   const navLinks = [
     { label: 'Characters', href: '/#characters', icon: Users },
     { label: 'Twin Avatars', href: '/#twin-spotlight', icon: Sparkles },
+    { label: 'Art Gallery', href: '/#gallery', icon: Layers },
     { label: 'Voice Cast', href: '/voice-cast', icon: Film },
     { label: 'Relationships', href: '/relationship-chart', icon: GitFork },
     { label: 'World Lore', href: '/lore', icon: BookOpen },

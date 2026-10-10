@@ -3,6 +3,7 @@ import { SiteHeader } from '@/components/avatar/SiteHeader';
 import { HeroSection } from '@/components/avatar/HeroSection';
 import { TwinSpotlight } from '@/components/avatar/TwinSpotlight';
 import { CharacterGrid } from '@/components/avatar/CharacterGrid';
+import { GallerySection } from '@/components/avatar/GallerySection';
 import { RelationshipChart } from '@/components/avatar/RelationshipChart';
 import { VoiceCastTable } from '@/components/avatar/VoiceCastTable';
 import { LoreSection } from '@/components/avatar/LoreSection';
@@ -22,6 +23,7 @@ function HomePage() {
         <HeroSection />
         <TwinSpotlight />
         <CharacterGrid />
+        <GallerySection />
         <RelationshipChart />
         <VoiceCastTable />
         <LoreSection />
