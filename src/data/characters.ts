@@ -29,6 +29,7 @@ export interface Character {
   avatarStatus: 'Active Earth Avatar' | 'Twin Avatar' | 'Airbender Ally' | 'Guard Captain' | 'Waterbender Platoon' | 'Haven Elder' | 'Wanderer Ally' | 'Animal Guide' | 'Spirit Threat' | 'Past Avatar';
   firstAppearance: string;
   keyMoments: string[];
+  seriesEra?: 'Seven Havens' | 'The Last Airbender' | 'The Legend of Korra';
 }
 
 export const CHARACTERS: Character[] = [
@@ -517,34 +518,162 @@ Throughout Book 1, it pursues Pavi and Nisha with relentless precision. Fan theo
     keyMoments: [
       'Emerging from the radioactive violet mist in the ravine',
       'Nearly engulfing the caravan before repelled by synchronized twin bending'
-    ]
+    ],
+    seriesEra: 'Seven Havens'
   },
   {
-    id: 'korra-legacy',
-    name: 'Avatar Korra (Legacy)',
-    alias: 'The Predecessor & The Cataclysm Mystery',
-    imageUrl: "/imgs/characters/korra.jpg",
+    id: 'aang',
+    name: 'Avatar Aang',
+    alias: 'The Last Airbender & Legend of Peace',
+    imageUrl: '/imgs/characters/aang.png',
+    bending: 'Avatar (Multi)',
+    elementColor: 'from-amber-500 to-sky-600 text-amber-300 border-amber-500/40',
+    badgeBg: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
+    faction: 'Team Avatar & Air Nomads',
+    voiceActor: {
+      name: 'Zach Tyler Eisen',
+      notableRole: 'Original Voice of Aang ("Avatar: The Last Airbender")',
+    },
+    animalCompanion: 'Appa & Momo',
+    age: 'Century Legend',
+    homeHaven: 'Southern Air Temple (Historical)',
+    quote: 'When we hit our lowest point, we are open to the greatest change.',
+    shortBio: 'The immortal legendary protagonist who ended the Hundred Year War and restored global harmony, inspiring all future Avatar: Seven Havens characters across history.',
+    fullBio: `Avatar Aang was a male Air Nomad born in 12 BG who re-emerged from 100 years frozen in an iceberg to master all four elements and defeat Fire Lord Ozai.
+
+In the Seven Havens era, Aang’s philosophy of non-violence and spiritual reconciliation provides a beacon of hope for young earthbender Pavi and the rest of the Avatar: Seven Havens characters.`,
+    personality: ['Playful', 'Compassionate', 'Wise', 'Peacekeeper', 'Unyielding Spirit'],
+    keyAbilities: [
+      'Master Airbending & Gliding',
+      'Four Element Avatar State',
+      'Energybending Mastery',
+      'Seismic Sense'
+    ],
+    relationships: [
+      {
+        targetId: 'pavi',
+        targetName: 'Pavi',
+        relation: 'Spiritual Predecessor',
+        description: 'Guides Pavi spiritually when she fears the heavy burden of the Avatar mantle.'
+      }
+    ],
+    avatarStatus: 'Past Avatar',
+    firstAppearance: 'Book 1: Water, Episode 01: "The Boy in the Iceberg"',
+    keyMoments: [
+      'Defeating Fire Lord Ozai under Sozin\'s Comet',
+      'Founding Republic City alongside Fire Lord Zuko'
+    ],
+    seriesEra: 'The Last Airbender'
+  },
+  {
+    id: 'zuko',
+    name: 'Fire Lord Zuko',
+    alias: 'Crown Prince of Redemption & The Blue Spirit',
+    imageUrl: '/imgs/characters/zuko.png',
+    bending: 'Fire',
+    elementColor: 'from-red-600 to-orange-500 text-orange-400 border-orange-500/40',
+    badgeBg: 'bg-red-500/15 text-orange-400 border-red-500/30',
+    faction: 'Fire Nation & Team Avatar',
+    voiceActor: {
+      name: 'Dante Basco',
+      notableRole: 'Original Voice of Prince Zuko ("Avatar: The Last Airbender")',
+    },
+    age: 'Historical Fire Lord',
+    homeHaven: 'Fire Nation Capital (Historical)',
+    quote: 'In the darkness, hope is something you give yourself. That is the meaning of inner strength.',
+    shortBio: 'The banished Fire Nation prince whose path from antagonist to hero established the profound redemption lore celebrated by all Avatar: Seven Havens characters.',
+    fullBio: `Zuko is the legendary firebending master who defied his tyrannical father Fire Lord Ozai to join Avatar Aang and end a century of global war. His transformation and mastery of the true ancient sun warrior firebending is revered in the historical chronicles of Avatar: Seven Havens characters.`,
+    personality: ['Determined', 'Honorable', 'Intense', 'Loyal Friend', 'Reflective'],
+    keyAbilities: [
+      'Dragon Firebending',
+      'Dual Broadswords Mastery',
+      'Lightning Redirection',
+      'Infiltration'
+    ],
+    relationships: [
+      {
+        targetId: 'jae',
+        targetName: 'Jae',
+        relation: 'Historical Inspiration',
+        description: 'His military defiance inspires Jae to disobey orders to protect the innocent.'
+      }
+    ],
+    avatarStatus: 'Past Avatar',
+    firstAppearance: 'Book 1: Water, Episode 01: "The Boy in the Iceberg"',
+    keyMoments: [
+      'The Last Agni Kai against Azula',
+      'Discovering the Sun Warriors and ancient dragons'
+    ],
+    seriesEra: 'The Last Airbender'
+  },
+  {
+    id: 'toph',
+    name: 'Toph Beifong',
+    alias: 'The Blind Bandit & Discoverer of Metalbending',
+    imageUrl: '/imgs/characters/toph.png',
+    bending: 'Earth',
+    elementColor: 'from-emerald-600 to-lime-600 text-emerald-400 border-emerald-500/40',
+    badgeBg: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
+    faction: 'Earth Kingdom & Team Avatar',
+    voiceActor: {
+      name: 'Michaela Jill Murphy',
+      notableRole: 'Original Voice of Toph Beifong ("Avatar: The Last Airbender")',
+    },
+    age: 'Historical Earth Legend',
+    homeHaven: 'Gaoling / Foggy Swamp (Historical)',
+    quote: 'I am the greatest earthbender in the world! Don’t you two dunderheads ever forget it!',
+    shortBio: 'The blind earthbending master who invented metalbending using seismic sense, whose physical techniques are directly studied by modern earthbending Avatar: Seven Havens characters.',
+    fullBio: `Toph Beifong revolutionized earthbending by feeling vibrations through the ground with her bare feet and discovering how to manipulate the minute impurities in metal. Her legendary seismic sense techniques are the historical foundation practiced by Pavi among the new Avatar: Seven Havens characters.`,
+    personality: ['Blunt', 'Fiercely Independent', 'Unstoppable', 'Brave', 'Affectionate Deep Down'],
+    keyAbilities: [
+      'Pioneering Seismic Sense',
+      'Metalbending Invention',
+      'Raw Earth Mastery',
+      'Tremorsense Combat'
+    ],
+    relationships: [
+      {
+        targetId: 'pavi',
+        targetName: 'Pavi',
+        relation: 'Elemental Originator',
+        description: 'Pavi inherits her foundational seismic connection to the earth from Toph\'s ancient teachings.'
+      }
+    ],
+    avatarStatus: 'Past Avatar',
+    firstAppearance: 'Book 2: Earth, Episode 06: "The Blind Bandit"',
+    keyMoments: [
+      'Inventing metalbending while trapped in a metal cage',
+      'Single-handedly holding up the sunken library of Wan Shi Tong'
+    ],
+    seriesEra: 'The Last Airbender'
+  },
+  {
+    id: 'korra',
+    name: 'Avatar Korra',
+    alias: 'Southern Water Tribe Avatar & Bridge of Worlds',
+    imageUrl: '/imgs/characters/korra_canon.png',
     bending: 'Avatar (Multi)',
     elementColor: 'from-blue-700 to-cyan-500 text-cyan-300 border-cyan-500/40',
     badgeBg: 'bg-cyan-900/30 text-cyan-300 border-cyan-700/30',
-    faction: 'Historical Avatar Cycle',
+    faction: 'Southern Water Tribe & Republic City',
     voiceActor: {
-      name: 'Janet Varney (Legacy Voice Archive)',
+      name: 'Janet Varney',
       notableRole: 'Original voice of Korra ("The Legend of Korra")',
     },
+    animalCompanion: 'Naga (Polar Bear Dog)',
     age: '225 Years Prior',
     homeHaven: 'Southern Water Tribe / Republic City (Historical)',
     quote: 'The Avatar’s duty is to bring balance, even when the world forgets what balance means.',
-    shortBio: 'The legendary predecessor to the new Avatar: Seven Havens characters, Avatar Korra preceded the Cataclysm by over two centuries and appears as a spiritual guide.',
-    fullBio: `Set 225 years after the era of *The Legend of Korra*, *Avatar: Seven Havens* constantly grapples with the historical legacy of Korra. In this future, the grand technological advances of Republic City have fallen into legendary myth following the "Great Cataclysm."
+    shortBio: 'The legendary predecessor to the new Avatar: Seven Havens characters, Avatar Korra opened the spirit portals and forged the new reincarnation cycle.',
+    fullBio: `Set 225 years after the era of *The Legend of Korra*, *Avatar: Seven Havens* explores the historical fallout of the great Cataclysm.
 
-Humanity believes that the Avatar failed or actively unleashed the apocalypse that split the earth into seven fortified havens. Because Korra had previously re-opened the Spirit Portals and severed the old past-life connections before forging a new cycle with Raava, scholars wonder: Did Raava fracture during the Cataclysm? And why did the Avatar reincarnate as twins?`,
-    personality: ['Legendary', 'Determined', 'Complex', 'Transformative'],
+Because Korra re-opened the Spirit Portals and forged a new harmonic cycle with Raava, scholars among the Avatar: Seven Havens characters search ancient murals to understand how Raava divided to create twin Avatars.`,
+    personality: ['Bold', 'Tenacious', 'Passionate', 'Deeply Spiritual', 'Protective'],
     keyAbilities: [
-      'Full Mastery of the Four Elements',
-      'Energybending Mastery',
+      'Four Element Mastery',
+      'Metalbending & Energybending',
       'Avatar State Manifestation',
-      'Spirit Portal Opening'
+      'Spirit Portals Connection'
     ],
     relationships: [
       {
@@ -561,10 +690,11 @@ Humanity believes that the Avatar failed or actively unleashed the apocalypse th
       }
     ],
     avatarStatus: 'Past Avatar',
-    firstAppearance: 'Historical Prologue & Statues in Ruined Temples',
+    firstAppearance: 'Book 1: Air, Episode 01: "Welcome to Republic City"',
     keyMoments: [
-      'Discovery of Korra\'s weathered stone relief in the Sunken Sanctuary',
-      'The cryptic vision received by Pavi at the Tree of Echoes'
-    ]
+      'Defeating Unalaq and opening the spirit portals',
+      'Surviving the Red Lotus metallic poison battle'
+    ],
+    seriesEra: 'The Legend of Korra'
   }
 ];

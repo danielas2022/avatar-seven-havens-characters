@@ -1,28 +1,45 @@
 import { useState, useMemo } from 'react';
 import { Link } from '@tanstack/react-router';
-import { Search, Filter, ArrowRight, Shield, Sparkles, UserCheck, Flame, Droplets, Wind, Mountain, Ghost } from 'lucide-react';
+import { Search, Filter, ArrowRight, Shield, Sparkles, UserCheck, Flame, Droplets, Wind, Mountain, Ghost, Film } from 'lucide-react';
 import { CHARACTERS, Character } from '@/data/characters';
 
 export function CharacterGrid() {
+  const [selectedEra, setSelectedEra] = useState<string>('ALL');
   const [selectedBending, setSelectedBending] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  const eraFilters = [
+    { label: 'ALL', name: 'All Generations' },
+    { label: 'Seven Havens', name: 'Seven Havens (New)' },
+    { label: 'The Last Airbender', name: 'The Last Airbender (Classic)' },
+    { label: 'The Legend of Korra', name: 'Legend of Korra (Classic)' },
+  ];
 
   const bendingFilters = [
     { label: 'All', icon: Sparkles },
     { label: 'Earth', icon: Mountain },
     { label: 'Air', icon: Wind },
     { label: 'Water', icon: Droplets },
+    { label: 'Fire', icon: Flame },
     { label: 'Non-Bender', icon: Shield },
     { label: 'Spirit', icon: Ghost },
   ];
 
   const filteredCharacters = useMemo(() => {
     return CHARACTERS.filter((char) => {
+      // Era filter
+      const matchesEra =
+        selectedEra === 'ALL' ||
+        char.seriesEra === selectedEra;
+
       // Element filter
       const matchesBending =
         selectedBending === 'All' ||
         char.bending === selectedBending ||
-        (selectedBending === 'Earth' && char.bending === 'Avatar (Multi)');
+        (selectedBending === 'Earth' && char.bending === 'Avatar (Multi)') ||
+        (selectedBending === 'Air' && char.bending === 'Avatar (Multi)') ||
+        (selectedBending === 'Water' && char.bending === 'Avatar (Multi)') ||
+        (selectedBending === 'Fire' && char.bending === 'Avatar (Multi)');
 
       // Search query filter
       const matchesQuery =
@@ -32,28 +49,46 @@ export function CharacterGrid() {
         char.voiceActor.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         char.faction.toLowerCase().includes(searchQuery.toLowerCase());
 
-      return matchesBending && matchesQuery;
+      return matchesEra && matchesBending && matchesQuery;
     });
-  }, [selectedBending, searchQuery]);
+  }, [selectedEra, selectedBending, searchQuery]);
 
   return (
     <section id="characters" className="py-16 md:py-24 border-b border-border/40">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20 mb-3">
-            <Filter className="h-3.5 w-3.5" />
-            <span>Official Character Gallery & Roster</span>
+            <Film className="h-3.5 w-3.5" />
+            <span>Classic Canon Legends &amp; Seven Havens Cast</span>
           </div>
-          <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
-            Avatar: Seven Havens Characters Database &amp; Roster
+          <h2 className="font-serif text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground mb-3">
+            Avatar Franchise Characters Roster &amp; Database
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base">
-            Official profiles, bending affinities, voice actors, and backstories for all Avatar: Seven Havens characters across the Seven Havens.
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            From the pioneering heroes of <em>Avatar: The Last Airbender</em> and <em>The Legend of Korra</em> to the brand-new cast of <strong className="text-foreground">Avatar: Seven Havens characters</strong> across the post-cataclysmic world.
           </p>
         </div>
 
-        {/* Filter & Search Bar */}
+        {/* Series Era Switcher Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+          {eraFilters.map((tab) => (
+            <button
+              key={tab.label}
+              type="button"
+              onClick={() => setSelectedEra(tab.label)}
+              className={`px-4 py-1.5 text-xs font-semibold rounded-xl transition-all ${
+                selectedEra === tab.label
+                  ? 'bg-amber-600 text-white shadow-md shadow-amber-600/20'
+                  : 'bg-muted/70 text-muted-foreground hover:text-foreground hover:bg-muted'
+              }`}
+            >
+              {tab.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Element Filter & Search Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto mb-10">
           {/* Element Filter Pills */}
           <div className="flex flex-wrap items-center gap-1.5 w-full sm:w-auto justify-center sm:justify-start">
@@ -92,7 +127,7 @@ export function CharacterGrid() {
         </div>
 
         {/* Character Card Grid with Artwork */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {filteredCharacters.map((char) => (
             <div
               key={char.id}
@@ -115,17 +150,15 @@ export function CharacterGrid() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
                   {/* Top Bending Badge */}
-                  <div className="absolute top-3 left-3">
+                  <div className="absolute top-3 left-3 flex gap-1.5">
                     <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border backdrop-blur-md shadow-md ${char.badgeBg}`}>
                       {char.bending}
                     </span>
-                  </div>
-
-                  {/* Top Haven Badge */}
-                  <div className="absolute top-3 right-3">
-                    <span className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-black/60 text-white/90 backdrop-blur-md">
-                      {char.homeHaven.split('(')[0]}
-                    </span>
+                    {char.seriesEra && (
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-black/70 text-amber-300 backdrop-blur-md border border-white/10">
+                        {char.seriesEra === 'Seven Havens' ? 'Seven Havens' : char.seriesEra === 'The Last Airbender' ? 'ATLA Classic' : 'Korra Classic'}
+                      </span>
+                    )}
                   </div>
 
                   {/* Bottom Portrait Name Strip */}
@@ -133,7 +166,7 @@ export function CharacterGrid() {
                     <h3 className="font-serif text-xl font-bold text-foreground drop-shadow group-hover:text-amber-500 transition-colors">
                       {char.name}
                     </h3>
-                    <p className="text-xs text-amber-500/90 font-medium drop-shadow">
+                    <p className="text-xs text-amber-500/90 font-medium drop-shadow truncate">
                       {char.alias}
                     </p>
                   </div>
@@ -174,15 +207,15 @@ export function CharacterGrid() {
 
               {/* Bottom Card Footer */}
               <div className="px-5 py-3 border-t border-border/60 bg-muted/20 flex items-center justify-between mt-auto">
-                <span className="text-[11px] text-muted-foreground font-mono">
-                  {char.firstAppearance.split(':')[0]}
+                <span className="text-[11px] text-muted-foreground font-mono truncate max-w-[140px]">
+                  {char.homeHaven.split('(')[0]}
                 </span>
                 <Link
                   to="/characters/$slug"
                   params={{ slug: char.id }}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-amber-500 hover:text-amber-400 group-hover:translate-x-1 transition-all"
                 >
-                  <span>Explore Character Profile</span>
+                  <span>View Dossier</span>
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
@@ -201,6 +234,7 @@ export function CharacterGrid() {
               onClick={() => {
                 setSearchQuery('');
                 setSelectedBending('All');
+                setSelectedEra('ALL');
               }}
               className="text-xs font-semibold text-amber-500 underline"
             >

@@ -87,18 +87,23 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link to="/characters/$slug" params={{ slug: 'aang' }} className="hover:text-foreground transition-colors">
+                  Avatar Aang (Classic Legend)
+                </Link>
+              </li>
+              <li>
+                <Link to="/characters/$slug" params={{ slug: 'korra' }} className="hover:text-foreground transition-colors">
+                  Avatar Korra (Modern Legend)
+                </Link>
+              </li>
+              <li>
+                <Link to="/characters/$slug" params={{ slug: 'zuko' }} className="hover:text-foreground transition-colors">
+                  Fire Lord Zuko
+                </Link>
+              </li>
+              <li>
                 <Link to="/characters/$slug" params={{ slug: 'karthik' }} className="hover:text-foreground transition-colors">
                   Captain Karthik
-                </Link>
-              </li>
-              <li>
-                <Link to="/characters/$slug" params={{ slug: 'daemin' }} className="hover:text-foreground transition-colors">
-                  Daemin (Waterbender)
-                </Link>
-              </li>
-              <li>
-                <Link to="/characters/$slug" params={{ slug: 'geet-ruhi' }} className="hover:text-foreground transition-colors">
-                  Geet &amp; Ruhi (Cat-Monkeys)
                 </Link>
               </li>
             </ul>

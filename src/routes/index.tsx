@@ -44,6 +44,10 @@ function HomePage() {
               <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Pavi (Earth Avatar)</span>
               <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Nisha (Twin Avatar)</span>
               <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Jae (Airbender Leader)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Aang (ATLA Legend)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Avatar Korra (TLOK Legend)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Fire Lord Zuko (Classic)</span>
+              <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Toph Beifong (Classic)</span>
               <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Karthik (Guard Commander)</span>
               <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Daemin (Waterbender)</span>
               <span className="px-2 py-0.5 rounded bg-muted border border-border/60">Agam (Haven Caretaker)</span>

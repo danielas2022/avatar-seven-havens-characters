@@ -9,9 +9,9 @@ export const Route = createFileRoute('/episodes')({
   head: () => {
     const siteUrl = envConfigs.app_url || 'https://www.avatarsevenhavenscharacters.com';
     const pageUrl = `${siteUrl}/episodes`;
-    const title = 'Avatar: Seven Havens Episode Guide & Air Schedule | Book 1 (13 Episodes)';
+    const title = 'Avatar Franchise Episode Guide & Seven Havens Roadmap | ATLA, Korra & Book 1';
     const description =
-      'Complete episode list and air schedule for Avatar: Seven Havens Book 1 (Paramount+ 2026). Episode titles, synopses, release dates, and key character appearances across all 13 episodes.';
+      'Complete episodic archive across the classic 61 chapters of Avatar: The Last Airbender, 52 episodes of The Legend of Korra, and the official Avatar Studios production roadmap for Avatar: Seven Havens.';
 
     return {
       meta: [
@@ -20,7 +20,7 @@ export const Route = createFileRoute('/episodes')({
         {
           name: 'keywords',
           content:
-            'Avatar Seven Havens episodes, Seven Havens episode guide, Avatar Seven Havens Book 1, On the Horizon, Into the Storm, The Order, Paramount Plus release schedule',
+            'Avatar episode guide, Avatar The Last Airbender episodes, Legend of Korra episodes, Avatar Seven Havens episodes, Seven Havens roadmap, Avatar Studios Paramount Plus',
         },
         { property: 'og:title', content: title },
         { property: 'og:description', content: description },
