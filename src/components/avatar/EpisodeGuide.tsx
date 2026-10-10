@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react';
 import { Tv, Calendar, Sparkles, ExternalLink, Play, Film, Award, CheckCircle2, Clapperboard, Star } from 'lucide-react';
+import { Link } from '@tanstack/react-router';
 import { FRANCHISE_EPISODES, SeriesEra, Episode } from '@/data/episodes';
+import { CANONICAL_CHARACTERS } from '@/data/canonical';
 
 export function EpisodeGuide() {
   const [selectedEra, setSelectedEra] = useState<SeriesEra>('ALL');
@@ -208,15 +210,46 @@ export function EpisodeGuide() {
                     <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider block mb-1.5">
                       Avatar: Seven Havens characters &amp; legends featured:
                     </span>
-                    <div className="flex flex-wrap gap-1">
-                      {ep.keyCharacters.map((char) => (
-                        <span
-                          key={char}
-                          className="text-[10px] px-2 py-0.5 rounded bg-muted text-muted-foreground font-medium border border-border/60"
-                        >
-                          {char}
-                        </span>
-                      ))}
+                    <div className="flex flex-wrap gap-1.5">
+                      {ep.characterIds && ep.characterIds.length > 0 ? (
+                        ep.characterIds.map((charId) => {
+                          const character = CANONICAL_CHARACTERS.find((c) => c.id === charId);
+                          if (!character) {
+                            return (
+                              <span
+                                key={charId}
+                                className="text-[10px] px-2 py-0.5 rounded bg-muted text-muted-foreground font-medium border border-border/60"
+                              >
+                                {charId}
+                              </span>
+                            );
+                          }
+                          return (
+                            <Link
+                              key={charId}
+                              to="/characters/$slug"
+                              params={{ slug: charId }}
+                              className="inline-flex items-center gap-1.5 text-[10px] px-2 py-0.5 rounded-full bg-card hover:bg-muted text-foreground hover:text-amber-400 font-medium border border-border/80 shadow-xs transition-colors group/char"
+                            >
+                              <img
+                                src={character.imageUrl}
+                                alt={character.name}
+                                className="h-3.5 w-3.5 rounded-full object-cover object-top shrink-0 border border-border/60"
+                              />
+                              <span>{character.name}</span>
+                            </Link>
+                          );
+                        })
+                      ) : (
+                        ep.keyCharacters.map((char) => (
+                          <span
+                            key={char}
+                            className="text-[10px] px-2 py-0.5 rounded bg-muted text-muted-foreground font-medium border border-border/60"
+                          >
+                            {char}
+                          </span>
+                        ))
+                      )}
                     </div>
                   </div>
 

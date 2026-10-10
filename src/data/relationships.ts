@@ -180,8 +180,8 @@ export const RELATIONSHIP_EDGES: GraphEdge[] = [
     type: 'twin',
     details: 'Long-lost identical twins who split the sacred Avatar cycle. Synchronized elemental powers and shared psychic empathy.',
     isCanon: true,
-    evidenceSource: 'Paramount+ Official Series Press Release (2026)',
-    episodeContext: 'Episode 1: "On the Horizon"',
+    evidenceSource: 'Paramount+ Official Series Press Release & Episode 3 Broadcast',
+    episodeContext: 'Episode 3: "Fractured Skies"',
     verifiedDate: 'October 2026',
   },
   {
@@ -252,8 +252,8 @@ export const RELATIONSHIP_EDGES: GraphEdge[] = [
     type: 'mentor',
     details: 'Avatar Korra appears in ethereal spiritual form to guide Pavi through the fractured reincarnation cycle.',
     isCanon: true,
-    evidenceSource: 'Avatar Studios Official Promotional Key Frame',
-    episodeContext: 'Concept Reveal Art',
+    evidenceSource: 'Paramount+ Episode 3 Broadcast & Official Concept Frame',
+    episodeContext: 'Episode 3: "Fractured Skies"',
     verifiedDate: 'October 2026',
   },
   {
@@ -264,8 +264,8 @@ export const RELATIONSHIP_EDGES: GraphEdge[] = [
     type: 'mentor',
     details: 'Avatar Aang stands beside Korra in ancient spirit visions, imparting non-violent wisdom to Pavi.',
     isCanon: true,
-    evidenceSource: 'Avatar Studios Official Promotional Key Frame',
-    episodeContext: 'Concept Reveal Art',
+    evidenceSource: 'Paramount+ Episode 3 Broadcast & Official Concept Frame',
+    episodeContext: 'Episode 3: "Fractured Skies"',
     verifiedDate: 'October 2026',
   },
   {

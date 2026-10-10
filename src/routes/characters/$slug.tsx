@@ -2,6 +2,7 @@ import { createFileRoute, notFound, Link } from '@tanstack/react-router';
 import { SiteHeader } from '@/components/avatar/SiteHeader';
 import { SiteFooter } from '@/components/avatar/SiteFooter';
 import { CHARACTERS } from '@/data/characters';
+import { getCharacterAppearances, getCharacterRelationships } from '@/data/canonical';
 import { envConfigs } from '@/config';
 import {
   Shield,
@@ -20,6 +21,7 @@ import {
   Scale,
   Award,
   Layers,
+  Tv,
 } from 'lucide-react';
 
 export const Route = createFileRoute('/characters/$slug')({
@@ -28,7 +30,9 @@ export const Route = createFileRoute('/characters/$slug')({
     if (!character) {
       throw notFound();
     }
-    return { character };
+    const appearances = getCharacterAppearances(character.id);
+    const relationships = getCharacterRelationships(character.id);
+    return { character, appearances, relationships };
   },
   head: ({ loaderData }) => {
     const char = loaderData?.character;
@@ -108,7 +112,7 @@ export const Route = createFileRoute('/characters/$slug')({
 });
 
 function CharacterDetailPage() {
-  const { character } = Route.useLoaderData();
+  const { character, appearances, relationships } = Route.useLoaderData();
 
   // Find other characters for related suggestions
   const otherCharacters = CHARACTERS.filter((c) => c.id !== character.id).slice(0, 3);
@@ -458,6 +462,86 @@ function CharacterDetailPage() {
             </div>
           </section>
 
+          {/* Verified Broadcast Episode Appearances (October 9, 2026 Premiere) */}
+          <section className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-sm mb-8 space-y-4">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/60 pb-3">
+              <div>
+                <h2 className="font-serif text-xl sm:text-2xl font-bold text-foreground flex items-center gap-2">
+                  <Tv className="h-5 w-5 text-amber-500" />
+                  <span>Verified Broadcast Episode Appearances</span>
+                </h2>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Evidence-backed episode tracking from the October 9, 2026 Paramount+ series premiere.
+                </p>
+              </div>
+              <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                {appearances.length} Episodes Verified
+              </span>
+            </div>
+
+            {appearances.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+                {appearances.map((app) => (
+                  <div
+                    key={app.id}
+                    className="rounded-xl border border-border/80 bg-muted/30 p-4 flex flex-col justify-between hover:border-amber-500/40 transition-all text-xs"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="font-mono text-[11px] font-bold text-amber-400">
+                          {app.episode?.episodeCode || 'Canon Arc'}
+                        </span>
+                        <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                          {app.verificationStatus === 'episode_verified' ? 'Episode Verified' : 'Official Press'}
+                        </span>
+                      </div>
+
+                      <h3 className="font-serif font-bold text-sm text-foreground mb-1">
+                        &ldquo;{app.episode?.title}&rdquo;
+                      </h3>
+                      <span className="text-[10px] font-mono text-muted-foreground block mb-2">
+                        Aired: {app.episode?.airDate}
+                      </span>
+
+                      <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-500/10 text-sky-400 mb-2">
+                        Role: {app.appearanceType}
+                      </span>
+
+                      <p className="text-[11px] text-muted-foreground leading-relaxed">
+                        {app.keyEvents}
+                      </p>
+                    </div>
+
+                    <div className="pt-3 mt-3 border-t border-border/40 flex items-center justify-between">
+                      <Link
+                        to="/episodes"
+                        className="text-[11px] font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition-colors"
+                      >
+                        <span>Episode Guide</span>
+                        <ArrowRight className="h-3 w-3" />
+                      </Link>
+                      {app.episode?.streamUrl && (
+                        <a
+                          href={app.episode.streamUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[10px] text-muted-foreground hover:text-foreground flex items-center gap-1"
+                        >
+                          <span>Paramount+</span>
+                          <ExternalLink className="h-2.5 w-2.5" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-xs text-muted-foreground py-2 italic">
+                No broadcast episodes verified yet for this character profile.
+              </p>
+            )}
+          </section>
+
           {/* Character Relationships & Dynamics (Audit Point 4) */}
           <section className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-sm mb-8">
             <div className="mb-4">
@@ -471,64 +555,145 @@ function CharacterDetailPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-              {character.relationships.map((rel) => (
-                <div
-                  key={rel.targetId}
-                  className="p-4 rounded-xl bg-muted/30 border border-border/70 text-xs flex flex-col justify-between"
-                >
-                  <div className="mb-2">
-                    <div className="flex items-center justify-between font-bold text-foreground text-sm mb-1">
-                      <span>{rel.targetName}</span>
-                      <span className="text-[10px] text-amber-500 font-semibold px-2 py-0.5 rounded bg-amber-500/10">
-                        {rel.relation}
-                      </span>
-                    </div>
+              {relationships && relationships.length > 0 ? (
+                relationships.map((rel) => {
+                  const targetName = rel.otherCharacter?.name || 'Allied Character';
+                  const targetId = rel.otherCharacter?.id || '';
+                  return (
+                    <div
+                      key={rel.id}
+                      className="p-4 rounded-xl bg-muted/30 border border-border/70 text-xs flex flex-col justify-between hover:border-amber-500/40 transition-all"
+                    >
+                      <div className="mb-2">
+                        <div className="flex items-center justify-between font-bold text-foreground text-sm mb-1.5">
+                          <div className="flex items-center gap-2">
+                            {rel.otherCharacter?.imageUrl && (
+                              <img
+                                src={rel.otherCharacter.imageUrl}
+                                alt={targetName}
+                                className="h-6 w-6 rounded-full object-cover object-top border border-border"
+                              />
+                            )}
+                            <span>{targetName}</span>
+                          </div>
+                          <span className="text-[10px] text-amber-500 font-semibold px-2 py-0.5 rounded bg-amber-500/10">
+                            {rel.label}
+                          </span>
+                        </div>
 
-                    <div className="mb-2">
-                      <span
-                        className={`inline-flex items-center gap-1 text-[9px] font-semibold px-2 py-0.5 rounded-full border ${
-                          rel.isCanon
-                            ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
-                            : 'bg-amber-500/10 text-amber-400 border-amber-500/30'
-                        }`}
-                      >
-                        {rel.isCanon ? (
-                          <>
-                            <CheckCircle2 className="h-2.5 w-2.5" />
-                            <span>Verified Canon</span>
-                          </>
-                        ) : (
-                          <>
-                            <HelpCircle className="h-2.5 w-2.5" />
-                            <span>Unconfirmed Theory</span>
-                          </>
+                        <div className="mb-2">
+                          <span
+                            className={`inline-flex items-center gap-1 text-[9px] font-semibold px-2 py-0.5 rounded-full border ${
+                              rel.isCanon
+                                ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+                                : 'bg-amber-500/10 text-amber-400 border-amber-500/30'
+                            }`}
+                          >
+                            {rel.isCanon ? (
+                              <>
+                                <CheckCircle2 className="h-2.5 w-2.5" />
+                                <span>Verified Canon</span>
+                              </>
+                            ) : (
+                              <>
+                                <HelpCircle className="h-2.5 w-2.5" />
+                                <span>Unconfirmed Theory</span>
+                              </>
+                            )}
+                          </span>
+                        </div>
+
+                        <p className="text-muted-foreground leading-relaxed mb-2">
+                          {rel.details}
+                        </p>
+
+                        {rel.episodeContext && (
+                          <div className="text-[10px] text-sky-400/90 font-medium mb-1.5 flex items-center gap-1">
+                            <Tv className="h-3 w-3" />
+                            <span>Context: {rel.episodeContext.episodeCode} &ldquo;{rel.episodeContext.title}&rdquo;</span>
+                          </div>
                         )}
-                      </span>
+
+                        {rel.source && (
+                          <p className="text-[10px] text-muted-foreground/80 italic border-l border-border pl-2">
+                            Source: {rel.source.title} ({rel.source.verifiedDate})
+                          </p>
+                        )}
+                      </div>
+
+                      {targetId && (
+                        <Link
+                          to="/characters/$slug"
+                          params={{ slug: targetId }}
+                          className="inline-flex items-center gap-1 text-[11px] font-semibold text-primary hover:underline mt-2 self-start"
+                        >
+                          <span>View {targetName} Dossier</span>
+                          <ArrowRight className="h-3 w-3" />
+                        </Link>
+                      )}
+                    </div>
+                  );
+                })
+              ) : (
+                character.relationships.map((rel) => (
+                  <div
+                    key={rel.targetId}
+                    className="p-4 rounded-xl bg-muted/30 border border-border/70 text-xs flex flex-col justify-between"
+                  >
+                    <div className="mb-2">
+                      <div className="flex items-center justify-between font-bold text-foreground text-sm mb-1">
+                        <span>{rel.targetName}</span>
+                        <span className="text-[10px] text-amber-500 font-semibold px-2 py-0.5 rounded bg-amber-500/10">
+                          {rel.relation}
+                        </span>
+                      </div>
+
+                      <div className="mb-2">
+                        <span
+                          className={`inline-flex items-center gap-1 text-[9px] font-semibold px-2 py-0.5 rounded-full border ${
+                            rel.isCanon
+                              ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30'
+                              : 'bg-amber-500/10 text-amber-400 border-amber-500/30'
+                          }`}
+                        >
+                          {rel.isCanon ? (
+                            <>
+                              <CheckCircle2 className="h-2.5 w-2.5" />
+                              <span>Verified Canon</span>
+                            </>
+                          ) : (
+                            <>
+                              <HelpCircle className="h-2.5 w-2.5" />
+                              <span>Unconfirmed Theory</span>
+                            </>
+                          )}
+                        </span>
+                      </div>
+
+                      <p className="text-muted-foreground leading-relaxed mb-2">
+                        {rel.description}
+                      </p>
+
+                      {rel.evidenceNote && (
+                        <p className="text-[10px] text-muted-foreground/80 italic border-l border-border pl-2">
+                          Evidence: {rel.evidenceNote}
+                        </p>
+                      )}
                     </div>
 
-                    <p className="text-muted-foreground leading-relaxed mb-2">
-                      {rel.description}
-                    </p>
-
-                    {rel.evidenceNote && (
-                      <p className="text-[10px] text-muted-foreground/80 italic border-l border-border pl-2">
-                        Evidence: {rel.evidenceNote}
-                      </p>
+                    {CHARACTERS.some((c) => c.id === rel.targetId) && (
+                      <Link
+                        to="/characters/$slug"
+                        params={{ slug: rel.targetId }}
+                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-primary hover:underline mt-2 self-start"
+                      >
+                        <span>View {rel.targetName} Dossier</span>
+                        <ArrowRight className="h-3 w-3" />
+                      </Link>
                     )}
                   </div>
-
-                  {CHARACTERS.some((c) => c.id === rel.targetId) && (
-                    <Link
-                      to="/characters/$slug"
-                      params={{ slug: rel.targetId }}
-                      className="inline-flex items-center gap-1 text-[11px] font-semibold text-primary hover:underline mt-2 self-start"
-                    >
-                      <span>View {rel.targetName} Dossier</span>
-                      <ArrowRight className="h-3 w-3" />
-                    </Link>
-                  )}
-                </div>
-              ))}
+                ))
+              )}
             </div>
           </section>
 
