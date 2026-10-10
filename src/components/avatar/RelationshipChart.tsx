@@ -184,6 +184,22 @@ export function RelationshipChart() {
                 </span>
               </div>
 
+              {selectedCharacter?.imageUrl && (
+                <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-4 border border-border/60 shadow-md">
+                  <img
+                    src={selectedCharacter.imageUrl}
+                    alt={selectedCharacter.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-3">
+                    <span className="text-xs font-bold text-white drop-shadow">
+                      {selectedCharacter.name} &bull; {selectedCharacter.bending}
+                    </span>
+                  </div>
+                </div>
+              )}
+
               <h3 className="font-serif text-2xl font-bold text-foreground mb-1">
                 {selectedNode.name}
               </h3>

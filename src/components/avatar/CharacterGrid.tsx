@@ -43,13 +43,13 @@ export function CharacterGrid() {
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20 mb-3">
             <Filter className="h-3.5 w-3.5" />
-            <span>Complete Cast & Character Roster</span>
+            <span>Official Character Gallery & Roster</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
             Avatar: Seven Havens Characters
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Detailed profiles, bending affinities, voice actors, and backstories across the Seven Havens.
+            Official portraits, bending affinities, voice actors, and backstories across the Seven Havens.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export function CharacterGrid() {
                   onClick={() => setSelectedBending(filter.label)}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                     isActive
-                      ? 'bg-amber-600 text-white shadow-sm shadow-amber-600/30 font-semibold'
+                      ? 'bg-amber-600 text-white shadow-sm shadow-amber-600/30 font-semibold scale-105'
                       : 'bg-muted/60 text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
                 >
@@ -91,66 +91,85 @@ export function CharacterGrid() {
           </div>
         </div>
 
-        {/* Character Card Grid */}
+        {/* Character Card Grid with Artwork */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {filteredCharacters.map((char) => (
             <div
               key={char.id}
-              className="rounded-xl border border-border/70 bg-card hover:border-amber-500/40 p-5 flex flex-col justify-between transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 group"
+              className="rounded-2xl border border-border/80 bg-card hover:border-amber-500/50 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group overflow-hidden"
             >
               <div>
-                {/* Header Tag Bar */}
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${char.badgeBg}`}>
-                    {char.bending}
-                  </span>
-                  <span className="text-[11px] text-muted-foreground font-medium truncate max-w-[150px]">
-                    {char.homeHaven}
-                  </span>
-                </div>
+                {/* Character Anime Portrait Header */}
+                <Link
+                  to="/characters/$slug"
+                  params={{ slug: char.id }}
+                  className="block relative aspect-[4/3] w-full overflow-hidden bg-muted/30"
+                >
+                  <img
+                    src={char.imageUrl}
+                    alt={`${char.name} - ${char.alias}`}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  {/* Atmospheric overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
 
-                {/* Character Name & Alias */}
-                <div className="mb-2">
-                  <Link
-                    to="/characters/$slug"
-                    params={{ slug: char.id }}
-                    className="font-serif text-xl font-bold text-foreground group-hover:text-amber-500 transition-colors"
-                  >
-                    {char.name}
-                  </Link>
-                  <p className="text-xs text-muted-foreground/90 font-medium">
-                    {char.alias}
-                  </p>
-                </div>
-
-                {/* Voice Actor Credit */}
-                <div className="flex items-center gap-1.5 text-xs text-foreground/80 mb-3 bg-muted/40 px-2.5 py-1.5 rounded-md">
-                  <UserCheck className="h-3.5 w-3.5 text-amber-500 shrink-0" />
-                  <span className="truncate">
-                    Voiced by <strong className="text-foreground">{char.voiceActor.name}</strong>
-                  </span>
-                </div>
-
-                {/* Short Bio */}
-                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3 mb-4">
-                  {char.shortBio}
-                </p>
-
-                {/* Ability Tags */}
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {char.keyAbilities.slice(0, 3).map((ability) => (
-                    <span
-                      key={ability}
-                      className="text-[10px] px-2 py-0.5 rounded bg-muted text-muted-foreground"
-                    >
-                      {ability}
+                  {/* Top Bending Badge */}
+                  <div className="absolute top-3 left-3">
+                    <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border backdrop-blur-md shadow-md ${char.badgeBg}`}>
+                      {char.bending}
                     </span>
-                  ))}
+                  </div>
+
+                  {/* Top Haven Badge */}
+                  <div className="absolute top-3 right-3">
+                    <span className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-black/60 text-white/90 backdrop-blur-md">
+                      {char.homeHaven.split('(')[0]}
+                    </span>
+                  </div>
+
+                  {/* Bottom Portrait Name Strip */}
+                  <div className="absolute bottom-2 left-4 right-4">
+                    <h3 className="font-serif text-xl font-bold text-foreground drop-shadow group-hover:text-amber-500 transition-colors">
+                      {char.name}
+                    </h3>
+                    <p className="text-xs text-amber-500/90 font-medium drop-shadow">
+                      {char.alias}
+                    </p>
+                  </div>
+                </Link>
+
+                {/* Card Body */}
+                <div className="p-5 pt-3">
+                  {/* Voice Actor Credit */}
+                  <div className="flex items-center gap-1.5 text-xs text-foreground/90 mb-3 bg-muted/50 px-2.5 py-1.5 rounded-lg border border-border/40">
+                    <UserCheck className="h-3.5 w-3.5 text-amber-500 shrink-0" />
+                    <span className="truncate">
+                      Voiced by <strong className="text-foreground">{char.voiceActor.name}</strong>
+                    </span>
+                  </div>
+
+                  {/* Short Bio */}
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3 mb-4">
+                    {char.shortBio}
+                  </p>
+
+                  {/* Ability Tags */}
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {char.keyAbilities.slice(0, 3).map((ability) => (
+                      <span
+                        key={ability}
+                        className="text-[10px] px-2 py-0.5 rounded bg-muted/70 text-muted-foreground font-medium"
+                      >
+                        {ability}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               {/* Bottom Card Footer */}
-              <div className="pt-3 border-t border-border flex items-center justify-between mt-auto">
+              <div className="px-5 py-3 border-t border-border/60 bg-muted/20 flex items-center justify-between mt-auto">
                 <span className="text-[11px] text-muted-foreground font-mono">
                   {char.firstAppearance.split(':')[0]}
                 </span>

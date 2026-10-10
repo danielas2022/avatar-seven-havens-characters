@@ -138,43 +138,65 @@ function CharacterDetailPage() {
           </Link>
 
           {/* Character Header Hero */}
-          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-lg relative overflow-hidden mb-8">
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-              <span className={`text-xs font-bold px-3 py-1 rounded-full border ${character.badgeBg}`}>
-                {character.bending} Bending &bull; {character.avatarStatus}
-              </span>
-              <span className="text-xs text-muted-foreground flex items-center gap-1 font-medium">
-                <MapPin className="h-3.5 w-3.5 text-amber-500" />
-                <span>{character.homeHaven}</span>
-              </span>
+          <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-xl relative overflow-hidden mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              {/* Left Column: Portrait Artwork */}
+              <div className="md:col-span-5 relative">
+                <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 group bg-muted/40">
+                  <img
+                    src={character.imageUrl}
+                    alt={`${character.name} - ${character.alias}`}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3 text-center">
+                    <span className={`text-[11px] font-bold px-3 py-1 rounded-full border backdrop-blur-md shadow-md ${character.badgeBg}`}>
+                      {character.bending} &bull; {character.avatarStatus}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Character Details */}
+              <div className="md:col-span-7 flex flex-col justify-center">
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
+                  <span className="text-xs text-muted-foreground flex items-center gap-1 font-medium">
+                    <MapPin className="h-3.5 w-3.5 text-amber-500" />
+                    <span>{character.homeHaven}</span>
+                  </span>
+                  <span className="text-xs text-muted-foreground font-mono">
+                    {character.age || 'Avatar Franchise'}
+                  </span>
+                </div>
+
+                <div className="mb-3">
+                  <h1 className="font-serif text-3xl sm:text-5xl font-bold text-foreground">
+                    {character.name}
+                  </h1>
+                  <span className="text-base sm:text-lg text-amber-500 font-medium">
+                    ({character.alias})
+                  </span>
+                </div>
+
+                {/* Voice actor pill */}
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-foreground/90 bg-muted/50 border border-border/60 px-3.5 py-2 rounded-xl mb-4 max-w-fit">
+                  <UserCheck className="h-4 w-4 text-amber-500 shrink-0" />
+                  <span>
+                    Voiced by <strong className="text-foreground">{character.voiceActor.name}</strong> ({character.voiceActor.notableRole})
+                  </span>
+                </div>
+
+                {/* Quote block */}
+                <blockquote className="italic text-xs sm:text-sm text-foreground/90 border-l-3 border-amber-500 pl-4 py-1.5 mb-5 bg-amber-500/5 rounded-r">
+                  &ldquo;{character.quote}&rdquo;
+                </blockquote>
+
+                {/* Summary */}
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                  {character.shortBio}
+                </p>
+              </div>
             </div>
-
-            <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 mb-3">
-              <h1 className="font-serif text-3xl sm:text-5xl font-bold text-foreground">
-                {character.name}
-              </h1>
-              <span className="text-base sm:text-lg text-amber-500 font-medium">
-                ({character.alias})
-              </span>
-            </div>
-
-            {/* Voice actor pill */}
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-foreground/90 bg-muted/50 border border-border/60 px-3.5 py-2 rounded-xl mb-6 max-w-fit">
-              <UserCheck className="h-4 w-4 text-amber-500 shrink-0" />
-              <span>
-                Voiced by <strong className="text-foreground">{character.voiceActor.name}</strong> ({character.voiceActor.notableRole})
-              </span>
-            </div>
-
-            {/* Quote block */}
-            <blockquote className="italic text-sm sm:text-base text-foreground/90 border-l-3 border-amber-500 pl-4 py-1.5 mb-6 bg-amber-500/5 rounded-r">
-              &ldquo;{character.quote}&rdquo;
-            </blockquote>
-
-            {/* Summary */}
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              {character.shortBio}
-            </p>
           </div>
 
           {/* Quick Stats Grid */}

@@ -2,6 +2,7 @@ export interface Character {
   id: string;
   name: string;
   alias: string;
+  imageUrl: string;
   bending: 'Earth' | 'Air' | 'Water' | 'Fire' | 'Non-Bender' | 'Spirit' | 'Avatar (Multi)';
   elementColor: string;
   badgeBg: string;
@@ -35,6 +36,7 @@ export const CHARACTERS: Character[] = [
     id: 'pavi',
     name: 'Pavi',
     alias: 'The Reluctant Avatar',
+    imageUrl: "/imgs/characters/pavi.jpg",
     bending: 'Earth',
     elementColor: 'from-amber-600 to-emerald-700 text-amber-500 border-amber-600/40',
     badgeBg: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
@@ -103,6 +105,7 @@ Accompanied by her mischievous cat-monkey companion Geet, Pavi's personality mir
     id: 'nisha',
     name: 'Nisha',
     alias: 'The Fiery Twin Avatar',
+    imageUrl: "/imgs/characters/nisha.jpg",
     bending: 'Avatar (Multi)',
     elementColor: 'from-orange-600 to-rose-700 text-rose-400 border-rose-500/40',
     badgeBg: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
@@ -165,6 +168,7 @@ When her Avatar powers ignite alongside Pavi's during a catastrophic spirit incu
     id: 'jae',
     name: 'Jae',
     alias: 'Platoon Leader of the Bending Brigade',
+    imageUrl: "/imgs/characters/jae.jpg",
     bending: 'Air',
     elementColor: 'from-sky-500 to-indigo-600 text-sky-400 border-sky-500/40',
     badgeBg: 'bg-sky-500/10 text-sky-400 border-sky-500/20',
@@ -225,6 +229,7 @@ When ordered by city magistrates to detain Pavi and Nisha as dangerous "Cataclys
     id: 'karthik',
     name: 'Karthik',
     alias: 'Captain of the Ellora City Guard',
+    imageUrl: "/imgs/characters/karthik.png",
     bending: 'Air',
     elementColor: 'from-blue-600 to-cyan-600 text-blue-400 border-blue-500/40',
     badgeBg: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
@@ -279,6 +284,7 @@ Karthik knows far more about the Cataclysm of 200 years ago than he reveals to t
     id: 'daemin',
     name: 'Daemin',
     alias: 'Waterbender Vanguard',
+    imageUrl: "/imgs/characters/daemin.png",
     bending: 'Water',
     elementColor: 'from-cyan-500 to-teal-700 text-cyan-400 border-cyan-500/40',
     badgeBg: 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
@@ -326,6 +332,7 @@ In combat, Daemin employs precise, high-pressure water whips and ice flash-freez
     id: 'agam',
     name: 'Agam',
     alias: 'Matriarch of the Ellora Bazaar',
+    imageUrl: "/imgs/characters/agam.jpg",
     bending: 'Non-Bender',
     elementColor: 'from-amber-700 to-yellow-600 text-amber-300 border-amber-600/40',
     badgeBg: 'bg-amber-600/10 text-amber-300 border-amber-600/20',
@@ -373,6 +380,7 @@ Agam provided young Pavi with warm meals and sheltered her from harsh winter squ
     id: 'zi',
     name: 'Zi',
     alias: 'The Desert Scout & Courier',
+    imageUrl: "/imgs/characters/zi.jpg",
     bending: 'Non-Bender',
     elementColor: 'from-purple-600 to-violet-800 text-purple-300 border-purple-500/40',
     badgeBg: 'bg-purple-500/10 text-purple-300 border-purple-500/20',
@@ -420,6 +428,7 @@ When Jae and the twins escape Ellora, they hire Zi to lead them across the Shatt
     id: 'geet-ruhi',
     name: 'Geet & Ruhi',
     alias: 'The Twin Cat-Monkeys',
+    imageUrl: "/imgs/characters/geet-ruhi.jpg",
     bending: 'Non-Bender',
     elementColor: 'from-emerald-500 to-teal-700 text-emerald-400 border-emerald-500/40',
     badgeBg: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
@@ -467,6 +476,7 @@ Ruhi is bonded to Nisha—featuring darker tiger-striped fur, razor-sharp pounce
     id: 'spirit-entity',
     name: 'The Dark Entity (Shadow Beast)',
     alias: 'The Cataclysm Stalker',
+    imageUrl: "/imgs/characters/spirit-entity.png",
     bending: 'Spirit',
     elementColor: 'from-violet-900 to-slate-900 text-violet-400 border-violet-700/50',
     badgeBg: 'bg-violet-950/60 text-violet-300 border-violet-800/40',
@@ -513,6 +523,7 @@ Throughout Book 1, it pursues Pavi and Nisha with relentless precision. Fan theo
     id: 'korra-legacy',
     name: 'Avatar Korra (Legacy)',
     alias: 'The Predecessor & The Cataclysm Mystery',
+    imageUrl: "/imgs/characters/korra.jpg",
     bending: 'Avatar (Multi)',
     elementColor: 'from-blue-700 to-cyan-500 text-cyan-300 border-cyan-500/40',
     badgeBg: 'bg-cyan-900/30 text-cyan-300 border-cyan-700/30',

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Film, User, Search, Sparkles, Star } from 'lucide-react';
 import { VOICE_CAST, CastMember } from '@/data/cast';
+import { CHARACTERS } from '@/data/characters';
 
 export function VoiceCastTable() {
   const [roleFilter, setRoleFilter] = useState<string>('All');
@@ -72,14 +73,27 @@ export function VoiceCastTable() {
               className="rounded-xl border border-border/80 bg-card p-5 flex flex-col justify-between hover:border-emerald-500/40 transition-colors shadow-sm"
             >
               <div>
-                <div className="flex items-start justify-between gap-3 mb-2">
-                  <div>
-                    <h3 className="font-serif text-lg font-bold text-foreground">
-                      {member.name}
-                    </h3>
-                    <p className="text-xs font-semibold text-emerald-400">
-                      as {member.character}
-                    </p>
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <div className="flex items-center gap-3">
+                    {CHARACTERS.find((c) => c.id === member.characterId)?.imageUrl ? (
+                      <img
+                        src={CHARACTERS.find((c) => c.id === member.characterId)!.imageUrl}
+                        alt={member.character}
+                        className="h-12 w-12 rounded-xl object-cover object-top border border-border/80 shadow-sm shrink-0"
+                      />
+                    ) : (
+                      <div className="h-12 w-12 rounded-xl bg-muted/60 border border-border/80 flex items-center justify-center shrink-0">
+                        <Film className="h-5 w-5 text-emerald-400" />
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="font-serif text-lg font-bold text-foreground">
+                        {member.name}
+                      </h3>
+                      <p className="text-xs font-semibold text-emerald-400">
+                        as {member.character}
+                      </p>
+                    </div>
                   </div>
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 whitespace-nowrap">
                     {member.roleType}

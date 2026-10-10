@@ -54,7 +54,7 @@ const params = new URLSearchParams({
   width: String(width),
   height: String(height),
   nologo: "true",
-  enhance: "true",
+  model: "turbo",
 });
 if (args.seed != null) params.set("seed", String(args.seed));
 
