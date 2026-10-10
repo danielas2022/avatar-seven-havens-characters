@@ -1,0 +1,47 @@
+name: Daily Episode & Content Sync
+
+on:
+  schedule:
+    # Runs daily at 08:00 UTC (4:00 AM EDT / 1:00 AM PDT)
+    # Aligns with overnight Paramount+ streaming episode drops
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  daily-sync:
+    name: Sync Show Releases & Update Indexes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Daily Sync Monitor
+        run: pnpm tsx scripts/daily-sync-monitor.ts
+
+      - name: Build Project Verification
+        run: NITRO_PRESET=cloudflare_module pnpm build
+        env:
+          NODE_ENV: production
+          VITE_APP_URL: https://avatarsevenhavenscharacters.com
+          DATABASE_PROVIDER: d1
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        if: env.CLOUDFLARE_API_TOKEN != ''
